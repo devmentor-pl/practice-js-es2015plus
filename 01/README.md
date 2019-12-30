@@ -4,7 +4,7 @@ Twoim pierwszym zadaniem jest uruchomienie Webpack-a, który będzie wykonywał 
 
 W pliku `./webpack.config.js` (w katalogu głównym) znajdziesz gotową konfigurację Webpack-a. Znajduje się tam zmienna `taskNumber`, która przechwowuje informacje o zadaniu, które w danym momencie przerabiasz.
 
-Za każdym razem będziesz musiał modyfikować zawartość tej zmiennej i ponownie uruchamiać tryb developerski. Pamiętasz jak to zrobić? Gdzie zapisany jest skrót do odpowiedniej komendy?
+Za każdym razem będziesz musiał modyfikować zawartość tej zmiennej w momencie przerabiania kolejnego zdania i ponownie uruchamiać tryb developerski. Pamiętasz jak to zrobić? Gdzie zapisany jest skrót do odpowiedniej komendy?
 
 Brakuje nam również odpowiedniej definicji w pliku `./babelrc` oraz `.browserslistrc`. Pamiętasz co tam należełoby wprowadzić i do czego jest to wykorzystywane?
 
