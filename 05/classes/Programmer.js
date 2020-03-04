@@ -1,16 +1,43 @@
 export default class Programmer {
     constructor( {skills = null, experience = null, willingness = null} ) {
-        this.skills = this.returnParamIfNumberOrRandomNumber(skills);
-        this.experience = this.returnParamIfNumberOrRandomNumber(experience);
-        this.willingness = this.returnParamIfNumberOrRandomNumber(willingness);
+        this.skills = this.isNumber(skills) ? skills : this.getSkillsRandomNumber();
+        this.experience = this.isNumber(experience) ? experience : this.getExperinceRandomNumber();
+        this.willingness = this.isNumber(willingness) ? willingness : this.getWillingnessRandomNumber();
     }
 
-    returnParamIfNumberOrRandomNumber( value ) {
-        if( typeof value === 'number' && value === value) {
-            return value;
-        } 
+    isNumber(value) {
+        if(
+            typeof value === 'number'
+            && value === value // NaN === NaN => false
+        ) {
+            return true;
+        }
 
-        return this.getRandomNumber(0, 100);
+        return false;
+    }
+
+    getSkillsRandomNumber() {
+        return this.getRandomNumber(...this.getMinMaxSkills());
+    }
+
+    getExperinceRandomNumber() {
+        return this.getRandomNumber(...this.getMinMaxExperience())
+    }
+
+    getWillingnessRandomNumber() {
+        return this.getRandomNumber(...this.getMinMaxWilligness())
+    }
+
+    getMinMaxSkills() {
+        return [0, 100];
+    }
+
+    getMinMaxExperience() {
+        return [0, 100];
+    }
+
+    getMinMaxWilligness() {
+        return [0, 100]
     }
 
     getRandomNumber(min, max) {
