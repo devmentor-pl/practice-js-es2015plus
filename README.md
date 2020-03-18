@@ -1,22 +1,28 @@
-# [![](assets/img/logo-readme2.jpg)](https://devmentor.pl) &nbsp; JS ES2015+
+# [![](assets/img/logo-readme2.jpg)](https://devmentor.pl) &nbsp; JavaScript: ECMAScript2015+
 
-Trzeba przyznać, że standard ES2015 tj. ES6 wniósł do świata JS bardzo dużo. Obecnie rozwiązania zaproponowane w tej specyfikacji są na co dzień wykorzystywane przez programistów i nie wyobrażają sobie oni pracy bez tych usprawnień.
+Trzeba przyznać, że standard *ES2015* tj. *ES6* wniósł do świata *JavaScript* bardzo dużo. Obecnie rozwiązania zaproponowane w tej specyfikacji są na co dzień wykorzystywane przez programistów i nie wyobrażają sobie oni pracy bez tych usprawnień.
 
-Jeśli chcesz zacząć pracę jako programista JS musisz poznać rozwiązania dostępne w wersji ES2015 i nowszych. Oczywiście nie zawsze przeglądarki nadążają ze zmianami dlatego nasz nowoczesny kod będziemy poddawać transpilacji przy pomocy Webpack-a. 
+Jeśli chcesz zacząć pracę jako programista JS musisz poznać rozwiązania dostępne w wersji *ES2015* i nowszych. Oczywiście nie zawsze przeglądarki nadążają ze zmianami dlatego nasz nowoczesny kod będziemy poddawać transpilacji przy pomocy *Webpack-a*. 
 
 
-> Zadania dostępne w tym repozytorium pozwolą zweryfikować Twoje umiejetności z tego zakresu. Ich poziom jest dostosowany pod osoby, które chcą znaleźć pierwszą pracę w zawodzie programisty JavaScript. Wykonanie każdego zadania bez problemów będzie oznaczać, że możesz przejść do następnych zagadnień.
+&nbsp;
 
-> Jeśli potrzebujesz materiałów do zadań to znajdziesz je na stronie [devmentor.pl](https://devmentor.pl)
+**Zadania:** :point_right: [:one:](./01) &nbsp; [:two:](./02) &nbsp; [:three:](./03) &nbsp; [:four:](./04) &nbsp; [:five:](./05) :triangular_flag_on_post:
+
+&nbsp;
+
+> :warning: Jeśli potrzebujesz materiałów do zadań to znajdziesz je na stronie :books:[devmentor.pl](https://devmentor.pl/p/html-and-css-rwd/)
+
+> :white_check_mark: Wykonanie każdego z zadań bez problemów będzie oznaczać, że jesteś gotowy, aby przejść do następnych zagadnień :arrow_right:
 
 ## Jak wykonać zadania?
 
-Jak pobierzemy pliki (o czym za chwilę) to należy realizować zadania zgodnie z numerami - od najniższego numeru do najwyższego. Poziom trudności stopniowo się zwiększa.
+Po pobraniu plików (o czym za chwilę) należy wykonywać zadania zgodnie z numerami - od najniższego numeru do najwyższego. Zgodnie z ich treścią, którą znajdziesz w pliku README.md w każdym z katalogów. Poziom trudności stopniowo się zwiększa.
 
 Mamy dwie ścieżki dla pobrania plików:
 
-* Chcę od razu przejść do zadań
-* Mam już doświadczenie z GitHub-em i GIT-em
+- Chcę od razu przejść do zadań
+- Mam już doświadczenie z GitHub-em i GIT-em
 
 ### Chcę od razu przejść do zadań
 
@@ -34,4 +40,4 @@ Dzieki temu rozwiązaniu będę mógł śledzić postępy Twojej pracy nad zadan
 
 &nbsp;
 
-> Powodzenia! Mateusz Bogolubow, [devmentor.pl](https://devmentor.pl)
+> Powodzenia! :zap: :zap: :zap: Mateusz Bogolubow, [devmentor.pl](https://devmentor.pl)
