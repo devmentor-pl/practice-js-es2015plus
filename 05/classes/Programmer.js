@@ -20,7 +20,7 @@ export default class Programmer {
         return this.getRandomNumber(...this.getMinMaxSkills());
     }
 
-    getExperinceRandomNumber() {
+    getExperienceRandomNumber() {
         return this.getRandomNumber(...this.getMinMaxExperience())
     }
 
