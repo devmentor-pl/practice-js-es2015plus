@@ -1,4 +1,4 @@
-const taskNumber = null;
+const taskNumber = '03'; // shoud be '0x' as value
 //numer przerabianego zadania
 
 const path = require('path');
@@ -11,14 +11,14 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'build'),
         // definiuje ścieżką wyjściową
-        filename: 'app.min.js',
+        filename: 'app.min3.js',
         // definiuję nazwę pliku wyjściowego
     },
     module: {
         rules: [
             {
                 test: /\.js$/,
-                // określam jakie pliki 
+                // określam jakie pliki
                 // będą brane pod uwagę
                 exclude: /node_modules/,
                 // określam wykluczenia

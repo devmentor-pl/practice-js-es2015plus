@@ -2,7 +2,7 @@
   "name": "practice-es2015plus",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": "true",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --open",
@@ -16,8 +16,9 @@
     "@babel/preset-env": "^7.6.3",
     "babel-loader": "^8.0.6",
     "html-webpack-plugin": "^3.2.0",
+    "nodemon": "^2.0.4",
     "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.9",
+    "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.9.0"
   }
 }
