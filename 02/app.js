@@ -3,17 +3,17 @@ const inputClass = Array.from(document.getElementsByClassName('cart__quantity'))
 //console.log(inputClass);
 const button = document.querySelector('button')
 const span = document.querySelector('.cart__total-price')
-//span.innerText = 
-const clickButton = function() {
-   // const value = document.getElementsByClassName('cart__quantity')
-    //const price = value.dataset.price
-    //console.log( price)
-    inputClass.forEach(function(el){
+button.addEventListener('click', ()=> {
+    let totalPrice = 0;
+    inputClass.forEach(el =>{
 //console.log(el.dataset.price)
-        const {value}= input
-        const {price} = el.dataset.price
-        console.log({value}, price)
+        const {value, dataset} = el;
+        const price = value * dataset.price;
+        totalPrice += price
+
     })
-}
-button.addEventListener('click', clickButton);
+    console.log(totalPrice)
+    span.innerText = totalPrice
+})
+
 

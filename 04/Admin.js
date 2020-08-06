@@ -1,4 +1,4 @@
-export default class User {
+export default class Admin {
     constructor( {login = '', password = ''} ) {
         this.login = login;
         this.password = password;
@@ -31,12 +31,11 @@ export default class User {
     }
 
     isPasswordCorrect() {
-        if(this.password.length >= 6) {
+        if(this.password.length >= 10) {
             return true;
         }
 
         return false;
     }
 }
-
-//console.log('bb')
+//console.log('admin')

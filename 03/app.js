@@ -1,30 +1,24 @@
 import {files} from './data.js';
+ let sum = 0;
 
-files.forEach(function(el){
+files.forEach(el => {
     //console.log(el.size.length)
-    let b = 0;
-    let mb = 0;
-    let gb = 0;
-    let kb= 0;
+    const {size} = el;
     if(!el.size.unit){
-        let b = el.size.length
-        console.log(b)
+       sum += size.length
     }
+    
     if(el.size.unit === 'KB'){
-        let kb = el.size.length * 1024
-        console.log(kb)
+        sum += size.length * 1024  
     }
 
     if(el.size.unit === 'MB'){
-        let mb = el.size.length * 1024 * 1024
-        console.log(mb)
+        sum += size.length * 1024 * 1024
     }
 
     if(el.size.unit === 'GB'){
-        let gb = el.size.length *1024 * 1024 * 1024
-        console.log(gb)
+        sum += size.length *1024 * 1024 * 1024
     }
 
-    //const sum = b + kb + mb + gb
-    console.log(kb+= kb)
 })
+console.log(sum)
