@@ -1,7 +1,8 @@
 export default class Programmer {
+                  // dlaczego jest ({...} = {}) jako argument konstruktora?
     constructor( {skills = null, experience = null, willingness = null} = {} ) {
         this.skills = this.isNumber(skills) ? skills : this.getSkillsRandomNumber();
-        this.experience = this.isNumber(experience) ? experience : this.getExperinceRandomNumber();
+        this.experience = this.isNumber(experience) ? experience : this.getExperienceRandomNumber();
         this.willingness = this.isNumber(willingness) ? willingness : this.getWillingnessRandomNumber();
     }
 
@@ -12,11 +13,11 @@ export default class Programmer {
         ) {
             return true;
         }
-
         return false;
     }
 
     getSkillsRandomNumber() {
+        // jak dziala THIS w tym przykladzie?
         return this.getRandomNumber(...this.getMinMaxSkills());
     }
 
@@ -47,7 +48,7 @@ export default class Programmer {
     getApproximateTimeTaskDoneInHours( {difficult, size} ) {
         let counter = 0;
         let time = 0;
-        let rand;        
+        let rand;
 
         const done = 5 * difficult * size;
         const chance = ( (0.5 * this.skills) + (0.3 * this.experience) + (0.2 * this.willingness)) / 3;
@@ -61,5 +62,11 @@ export default class Programmer {
         }
 
         return time;
+    }
+
+    // for my own reference
+    logUser(){
+      // jak odwolac sie do instancji w metodie w klasie
+      console.log(`skills ${this.skills}, experience ${this.experience}, willingness ${this.willingness}`);
     }
 }
