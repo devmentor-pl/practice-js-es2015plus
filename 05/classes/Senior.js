@@ -1,11 +1,11 @@
 import Programmer from './Programmer';
 
 export default class Senior extends Programmer {
-  constructor( {skills, experience, willingness} ) {
-    super(skills, experience, willingness);
+  constructor(...args) {
+    super(...args);
   }
   getMinMaxSkills() {
-      return [50, 90];
+      return [99, 100];
   }
 
   getMinMaxExperience() {

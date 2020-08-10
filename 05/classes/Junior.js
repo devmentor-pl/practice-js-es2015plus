@@ -1,8 +1,11 @@
 import Programmer from './Programmer';
 
 export default class Junior extends Programmer {
-  constructor( {skills, experience, willingness} ) {
-    super(skills, experience, willingness);
+
+  // JEŚLI CHCIAŁBYM TO ROZWIĄZAĆ W PODOBNY SPOSÓB, TO JAK?
+  // constructor({skills, experience, willingness}) {
+  constructor(...args) {
+    super(...args);
   }
   getMinMaxSkills() {
       return [0, 30];

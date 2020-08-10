@@ -26,12 +26,12 @@ const timeJunior = junior.getApproximateTimeTaskDoneInHours( task );
 console.log('Total time junior at task: ' + timeJunior);
 
 // mid instance
-const mid = new Mid( features );
+const mid = new Mid();
 const timeMid = mid.getApproximateTimeTaskDoneInHours( task );
 console.log('Total time mid at task: ' + timeMid);
 
-// junior instance
-const senior = new Senior( features );
+// senior instance
+const senior = new Senior();
 const timeSenior = senior.getApproximateTimeTaskDoneInHours( task );
 console.log('Total time senior at task: ' + timeSenior);
 
