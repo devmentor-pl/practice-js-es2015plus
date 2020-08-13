@@ -1,4 +1,5 @@
-export default class Admin extends class User{
+import User from './User.js';
+export default class Admin extends User{
 
     isPasswordCorrect() {
         if(this.password.length >= 10) {
