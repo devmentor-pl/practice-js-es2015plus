@@ -17,9 +17,14 @@ btn.addEventListener('click', () => {
     items.forEach(price => {
 
         const input = price.querySelector('.cart__quantity')
-        // total += input.value;
-        //(zpaytac parseInt, parseFloat)
-        total += parseInt(input.value)
+
+        const priceItem = input.dataset.price;
+        console.log(priceItem)
+        total += parseInt(input.value * priceItem);
+
+        console.log(`bo ${input.value} * ${priceItem} jest =  ${total}`)
+        // (zapytac parseInt, parseFloat)
+
 
         console.log(total)
 
