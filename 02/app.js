@@ -11,7 +11,7 @@ console.log(totalSpan)
 
 
 btn.addEventListener('click', () => {
-
+    console.log('działa')
     let total = 0;
 
     items.forEach(price => {

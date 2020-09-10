@@ -1,2 +1,3 @@
-import {files} from './data.js';
-
+import {
+    files
+} from './data.js';
