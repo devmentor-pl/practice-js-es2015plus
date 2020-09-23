@@ -7,5 +7,5 @@ const {
 } = {
     ...message
 };
-l
+
 console.log(text);

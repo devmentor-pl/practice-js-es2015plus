@@ -5,6 +5,7 @@ const btn = document.querySelector('.cart__btn-calculate');
 
 
 const items = Array.from(document.getElementsByClassName('cart__item'));
+console.log(items)
 const totalSpan = document.querySelector('.cart__total-price');
 console.log(totalSpan)
 

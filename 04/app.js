@@ -1,4 +1,5 @@
 import User from './User.js';
+import Admin from './admin.js'
 
 const userData = {
     login: 'user@devmentor.pl',
@@ -12,4 +13,10 @@ const adminData = {
 const user = new User(userData);
 user.register();
 
-console.log('ok')
+
+
+const admin1 = new Admin(userData);
+admin1.register(); // error
+
+const admin2 = new Admin(adminData);
+admin2.register(); // done
