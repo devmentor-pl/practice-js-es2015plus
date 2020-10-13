@@ -1,0 +1,6 @@
+{
+  "presets": [
+    "@babel/preset-env"
+  ]
+}
+//To zestaw ustawień, dzięki którym kod napisany zgodnie z nowymi standardami ECMAScript jest transpilowany do kodu zrozumiałego również dla starszych przeglądarek. Akurat ten preset zwalnia nas z potrzeby manualnej konfiguracji transformacji składni.
