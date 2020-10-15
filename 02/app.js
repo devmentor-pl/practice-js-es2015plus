@@ -8,12 +8,12 @@ const sumInputValues = (inputArr) => {
   return valuesSum
 }
 
-const sumCart = (e) => {
-  const btn = e.currentTarget.querySelector('.cart__btn-calculate');
-  const cartSumElement = e.currentTarget.querySelector('.cart__total-price');
+const sumCart = ({ currentTarget, target }) => {
+  const btn = currentTarget.querySelector('.cart__btn-calculate');
+  const cartSumElement = currentTarget.querySelector('.cart__total-price');
 
-  if (btn && e.target === btn && cartSumElement) {
-    const inputList = e.currentTarget.getElementsByClassName('cart__quantity');
+  if (btn && target === btn && cartSumElement) {
+    const inputList = currentTarget.getElementsByClassName('cart__quantity');
     cartSumElement.innerText = sumInputValues([...inputList])
   }
 }
