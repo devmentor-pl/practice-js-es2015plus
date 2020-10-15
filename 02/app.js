@@ -2,8 +2,8 @@
 
 const sumInputValues = (inputArr) => {
   let valuesSum = 0;
-  [...inputArr].forEach(input => {
-    valuesSum += parseFloat(input.value);
+  [...inputArr].forEach(({ value }) => {
+    valuesSum += parseFloat(value);
   })
   return valuesSum
 }
