@@ -14,7 +14,7 @@ const convertToBytes = ([size, unit]) => {
   }
 }
 
-const sumSize = (arr) => {
+const sumSize = arr => {
   let convertedSizes = [];
   for (const item of arr) {
     const itemSize = convertToBytes(getSize(item));
