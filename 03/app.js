@@ -9,8 +9,8 @@ const convertToBytes = ([size, unit]) => {
   switch (unit) {
     case 'B': return size;
     case 'KB': return size * 1024;
-    case 'MB': return size + Math.pow(1024, 2);
-    case 'GB': return size + Math.pow(1024, 3)
+    case 'MB': return size * 1048576;
+    case 'GB': return size * 1073741824
   }
 }
 
