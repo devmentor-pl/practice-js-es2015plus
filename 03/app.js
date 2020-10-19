@@ -1,22 +1,24 @@
 import { files } from "./data.js";
 
+const getUnits = () => {
+  return ["B", "KB", "MB", "GB", "TB"];
+};
+
 const bytesToSize = (bytes, fractionDigits = 2) => {
-  const units = ["B", "KB", "MB", "GB", "TB"];
+  let i = 0;
+  const units = getUnits();
+  const base = 1024;
 
-  if (bytes === 0) {
-    return "0 B";
-  }
+  do {
+    bytes /= base;
+    i++;
+  } while (bytes > base);
 
-  const i = Math.min(
-    parseInt(Math.floor(Math.log(bytes) / Math.log(1024)).toString(), 10),
-    units.length - 1
-  );
-
-  return `${(bytes / 1024 ** i).toFixed(i ? fractionDigits : 0)} ${units[i]}`;
+  return bytes.toFixed(fractionDigits) + units[i];
 };
 
 const convertSizeToBytes = (size, unit) => {
-  const units = ["B", "KB", "MB", "GB", "TB"];
+  const units = getUnits();
   const base = 1024;
   const index = units.indexOf(unit);
 
