@@ -8,12 +8,11 @@ if (calculateButton) {
     const totalPriceElem = document.querySelector(".cart__total-price");
     let totalPrice = 0;
 
-    Array.from(inputsListElem).forEach((elem) => {
-      const { value } = elem;
-      const price = Number(value);
+    Array.from(inputsListElem).forEach(({ value, dataset: { price } }) => {
+      const quantity = Number(value);
 
-      if (!Number.isNaN(price)) {
-        totalPrice += price;
+      if (!Number.isNaN(quantity)) {
+        totalPrice += price * quantity;
       }
     });
 
