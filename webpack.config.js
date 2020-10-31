@@ -1,4 +1,4 @@
-const taskNumber = null;
+const taskNumber = '01';
 //numer przerabianego zadania
 
 const path = require('path');
@@ -15,18 +15,16 @@ module.exports = {
         // definiuję nazwę pliku wyjściowego
     },
     module: {
-        rules: [
-            {
-                test: /\.js$/,
-                // określam jakie pliki 
-                // będą brane pod uwagę
-                exclude: /node_modules/,
-                // określam wykluczenia
-                use: 'babel-loader',
-                // określam jaki [loader]
-                // ma być wykorzystany
-            }
-        ]
+        rules: [{
+            test: /\.js$/,
+            // określam jakie pliki 
+            // będą brane pod uwagę
+            exclude: /node_modules/,
+            // określam wykluczenia
+            use: 'babel-loader',
+            // określam jaki [loader]
+            // ma być wykorzystany
+        }]
         // obecnie brak dodatkowych ustawień
     },
     plugins: [

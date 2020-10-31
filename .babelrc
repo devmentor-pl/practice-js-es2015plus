@@ -1,0 +1,4 @@
+{
+    "presets": ["@babel/preset-env"]
+}
+//Definicja jakimi zasadami ma się kierować Babel podczas transpilacji
