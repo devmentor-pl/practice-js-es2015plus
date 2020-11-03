@@ -2,7 +2,63 @@ import {
     files
 } from './data.js';
 
-let sum = 0;
+
+const filesObjectArray = [...files];
+console.log(filesObjectArray);
+
+const calculateSize = (length, unit, size) => {
+    return size = length * unit;
+}
+
+let totalSize = 0;
+
+filesObjectArray.forEach(object => {
+    let {
+        size: {
+            length,
+            unit
+        }
+    } = object
+
+    if (unit === 'KB') {
+        unit = 1024;
+    } else if (unit === 'MB') {
+        unit = 1024 * 1024;
+    } else if (unit === 'GB') {
+        unit = 1024 * 1024 * 1024;
+    } else {
+        unit = 1;
+    }
+
+    let size = calculateSize(length, unit);
+    totalSize += size;
+})
+
+console.log(totalSize);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* let sum = 0;
 
 const convertSize = (obj) => {
     let size;
@@ -31,4 +87,4 @@ files.forEach(file => {
     sum += size;
 })
 
-console.log(sum);
+console.log(sum); */
