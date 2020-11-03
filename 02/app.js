@@ -9,13 +9,15 @@ const printSum = (sum) => {
 
 const submitPrices = (e) => {
     e.preventDefault();
+
     let sum = 0;
-    inputsArray.forEach((input) => {
-        if (parseFloat(input.value) >= 0) {
-            sum += parseFloat(input.value);
-        }
+
+    inputsArray.forEach(input => {
+        sum += input.value * input.dataset.price;
     })
+
     printSum(sum);
+
 }
 
 button.addEventListener('click', submitPrices);
