@@ -4,7 +4,6 @@ const totalPrice = document.querySelector('.cart__total-price');
 const inputsArray = [...inputs];
 
 const printSum = (sum) => {
-    totalPrice.textContent = '';
     totalPrice.textContent = sum;
 }
 
