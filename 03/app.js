@@ -6,24 +6,31 @@ const sizeSum = () => {
         files.forEach(f => {
             const {name, size} = f;
             
-            unitCheck(size)
+            //unitCheck(size)
             
-            sum = sum + size.length;
+            sum = sum + unitCheck(size);
             
 
         })
 
 };
 const unitCheck = (size) => {
+    let num = 0;
     if (size.unit === 'KB') {
-        size.length = size.length * 1024;
+         num = size.length * 1024;
+        //size.length = size.length * 1024;
     }
     if (size.unit === 'MB') {
-        size.length = size.length * 1048576;
+         num = size.length * 1048576;
+
+        //size.length = size.length * 1048576;
     }
     if (size.unit === 'GB') {
-        size.length = size.length * 1073741824;
+         num = size.length * 1073741824;
+
+        //size.length = size.length * 1073741824;
     }
+    return num;
 }
 sizeSum()
 const filesSize = sum + " B";
