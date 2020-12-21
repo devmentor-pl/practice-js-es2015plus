@@ -1,4 +1,4 @@
-export default class Admin {
+/*export default class Admin {
     constructor( {login = '', password = ''} ) {
         this.login = login;
         this.password = password;
@@ -37,4 +37,17 @@ export default class Admin {
 
         return false;
     }
-}
+} */
+
+import User from "./User";
+
+export default class Admin extends User {
+    isPasswordCorrect() {
+        if(this.password.length >= 10) {
+            return true;
+        }
+
+        return false;
+    }
+   }
+   
