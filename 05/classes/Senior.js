@@ -1,4 +1,6 @@
-class Senior {
+import Programmer from "./Programmer";
+
+/* class Senior {
     constructor(skills, experience, willingness, obj) {
         this.skills = this.isNumber(skills) ? skills : this.getSkillsRandomNumber();
         this.experience = this.isNumber(experience) ? experience : this.getExperienceRandomNumber();
@@ -73,6 +75,38 @@ class Senior {
         }
 
         return time;
+    }
+}
+export default Senior; */
+class Senior extends Programmer {
+    constructor(skills, experience, willingness, obj) {
+        super(skills, experience, willingness, obj)
+        this.time = this.isNumberAndSize(obj) ? this.getApproximateTimeTaskDoneInHours( obj ) : undefined;
+    }
+    isNumberAndSize(value) {
+        console.log(value)
+        //const {a, b} = value;
+        //console.log(a, b)
+        // probowalem tu destrukturyzacji , nie wiem dlaczego sie nmie powiodlo.
+        if(
+            value && typeof value.difficult === 'number' && typeof value.size === 'number' && value.size <= 3 && value.size >= 1
+        )
+        {    
+            return true;
+        }
+
+        return false;
+    }
+    getMinMaxSkills() {
+        return [50, 90];
+    }
+
+    getMinMaxExperience() {
+        return [60, 90];
+    }
+
+    getMinMaxWilligness() {
+        return [40, 60]
     }
 }
 export default Senior;
