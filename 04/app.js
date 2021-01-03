@@ -1,6 +1,6 @@
 import User from './User.js';
 import Admin from './Admin.js';
-//uwaga, uwaga - dodać node_modules do .gitignore chyba
+
 const userData = { login: 'user@devmentor.pl', password: '123456' }
 const adminData = { login: 'admin@devmentor.pl', password: '1234567890' }
 
