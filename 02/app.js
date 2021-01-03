@@ -7,7 +7,6 @@ const init = () => {
 const showTotalPrice = () => {
     const totalPrice = calculate();
     const priceLabel = document.querySelector('.cart__total-price');
-    console.log(priceLabel);
     priceLabel.innerText = totalPrice;
 }
 
@@ -23,11 +22,18 @@ const sumValues = (itemsList) => {
 };
 
 const getReceivable = (itemEl) => {
-    if(!isPositiveNumber(itemEl.value)) {
-        console.error(`${itemEl.parentElement.innerText}: Podana liczba jest mniejsza od zera`);
+    const {
+        value,
+        parentElement,
+        dataset,    
+    } = itemEl;
+    const {innerText} = parentElement;
+    const {price} = dataset; 
+    if(!isPositiveNumber(value)) {
+        console.error(`${innerText}: Podana liczba jest mniejsza od zera`);
         return 0;
     }
-    return itemEl.dataset.price * itemEl.value;
+    return price * value;
 }
 
 const isPositiveNumber = (value) => {
