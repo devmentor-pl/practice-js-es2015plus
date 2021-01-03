@@ -24,11 +24,10 @@ const sumValues = (itemsList) => {
 const getReceivable = (itemEl) => {
     const {
         value,
-        parentElement,
-        dataset,    
+        parentElement: {innerText},
+        dataset: {price}
     } = itemEl;
-    const {innerText} = parentElement;
-    const {price} = dataset; 
+    
     if(!isPositiveNumber(value)) {
         console.error(`${innerText}: Podana liczba jest mniejsza od zera`);
         return 0;
