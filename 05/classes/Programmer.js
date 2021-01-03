@@ -47,10 +47,10 @@ export default class Programmer {
     getApproximateTimeTaskDoneInHours( {difficult, size} ) {
         let counter = 0;
         let time = 0;
-        let rand;        
+        let rand;
 
         const done = 5 * difficult * size;
-        const chance = ( (0.5 * this.skills) + (0.3 * this.experience) + (0.2 * this.willingness)) / 3;
+        const chance = ( (0.5 * this.skills) + (0.3 * this.experience) + (0.2 * this.willingness)) / 3; 
         while(counter < done && time < 1000) {
             rand = this.getRandomNumber(0, 100);
             if(rand <= chance) {
