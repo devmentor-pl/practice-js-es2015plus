@@ -6,7 +6,6 @@ const sumArr = arr => {
     return acc + num;
     }, 0);
 };
-
 const convertToBytes = files => {
     switch(files.unit) {
         case 'GB':
