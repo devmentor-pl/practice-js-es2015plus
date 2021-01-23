@@ -1,4 +1,4 @@
-import User from './User.js'; // czy jak damu tutaj oddrazu admin to mozemy to jakos wykorzystać? 
+import User from './User.js';
 
 export default class Admin extends User {
     isPasswordCorrect() {
