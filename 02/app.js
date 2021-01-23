@@ -1,13 +1,12 @@
-function init() {
+function init() {       // coś tu zrypałem ale chyba jestem ślepy/ zerkne to poprawić ja o tym zapomnę xd 
     const totalCostBtn = document.querySelector('.cart__btn-calculate');
     totalCostBtn.addEventListener('click', showTotalCost);
-}
-
+};
+    
 const showTotalCost = () => {
     const totalCost = sumCost();
     const totalCostEl = document.querySelector('.cart__total-price');
     totalCostEl.textContent = totalCost;
-    return totalCost;
 };
 
 const sumCost = () => {
@@ -17,8 +16,8 @@ const sumCost = () => {
             return acc + num;
         }, 0);
     };
-    return console.log(calcTotalCost());
-};
+    return calcTotalCost();
+}
 
 const getProductsCosts = () => {
     const productsCostList = [];
@@ -28,7 +27,7 @@ const getProductsCosts = () => {
         productsCostList.push(costItem);
     });
     return productsCostList;
-};
+}
 
 
 
