@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 const taskNumber = '02';
+=======
+const taskNumber = '01';
+>>>>>>> 153214ba7a068ba525be42cfc7334691ecd6ba32
 //numer przerabianego zadania
 
 const path = require('path');
