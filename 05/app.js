@@ -1,10 +1,10 @@
-import Programmer from './classes/Programmer.js';
+import Programmer from './classes/Programmer.js';  //?dev Diedy trzeba a kiedy nie trzeba pisać rozszerzenia przy podawania ścieżki, bo tu nie było i już nie wiem/myślałem, że trzeba podawać typ pliku? 
 import Junior from './classes/Junior.js';
 import Mid from './classes/Mid.js';
 import Senior from './classes/Senior.js';
 
 const features = {
-    skills: 10, 
+    skills: 10,
     experience: 10, 
     willingness: 10,
 }
@@ -16,7 +16,7 @@ const task = {
 
 const programmer = new Programmer( features );
 const time = programmer.getApproximateTimeTaskDoneInHours( task );
-console.log(time);
+console.log(time);      //?dev W jakiej to jest jednostce? ms? s? Części godziny?
 
 const features1 = {
     skills: 30,
