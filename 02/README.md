@@ -4,7 +4,9 @@
 
 &nbsp;
 
-Twoim zadaniem będzie napisanie programu, który obliczy sumę jaką Klient powinien zapłacić za zakupy.
+Twoim zadaniem będzie napisanie programu, który obliczy sumę jaką klient powinien zapłacić za zakupy.
+
+Zwróć uwagę, że do `<input>` jest wpisywana ilość, a w `dataset` jest zamieszczona cena.
 
 Po kliknięciu w przycisk `.cart__btn-calculate` należy obliczyć łaczną cenę zakupionych produktów i wstawić ją do `.cart__total-price`.
 
