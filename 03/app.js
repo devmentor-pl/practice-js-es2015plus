@@ -2,21 +2,21 @@ import { files } from './data.js';
 
 const getData = () => {
     const data = [];
-    for (let { size: { length: len, unit: uni = 'B' } } of files) {
-        if (uni === 'KB') {
-            len = len * 1024;
-            uni = 'B';
+    for (let { size: { length, unit = 'B' } } of files) {
+        if (unit === 'KB') {
+            length = length * 1024;
+            unit = 'B';
         }
-        if (uni === 'MB') {
-            len = len * 1024 * 1024;
-            uni = 'B';
+        if (unit === 'MB') {
+            length = length * 1024 * 1024;
+            unit = 'B';
         }
-        if (uni === 'GB') {
-            len = len * 1024 * 1024 * 1024;
-            uni = 'B';
+        if (unit === 'GB') {
+            length = length * 1024 * 1024 * 1024;
+            unit = 'B';
         }
-        console.log(`Długość: ${len}, jednostka ${uni}`);
-        data.push(len);
+        console.log(`Długość: ${length}, jednostka ${unit}`);
+        data.push(length);
     }
     return data;
 }

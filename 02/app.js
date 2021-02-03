@@ -4,8 +4,9 @@ const createUlError = (el) => {
     el.appendChild(ulErrorsEl);
 }
 
+
 const btnEl = document.querySelector('.cart__btn-calculate');
-console.log(btnEl);
+
 
 createUlError(btnEl.parentElement);
 
@@ -25,9 +26,14 @@ const showPrice = (e) => {
 
     inputArray.forEach(element => {
 
-        const inputValue = getData(element);
+        const inputPrice = getPrice(element);
+        const inputValue = getDataValue(element);
+
         validation(errors, inputValue);
-        resultPrice.push(inputValue);
+
+        const calcPrice = calcMul(inputPrice, inputValue);
+
+        resultPrice.push(calcPrice);
     });
 
 
@@ -52,7 +58,13 @@ const showPrice = (e) => {
 btnEl.addEventListener('click', showPrice);
 
 
-const getData = (obj) => {
+const getPrice = (obj) => {
+    const { dataset: { price } } = obj;
+    return price;
+}
+
+
+const getDataValue = (obj) => {
     const { value } = obj;
     return value;
 }
@@ -77,6 +89,9 @@ const showErrors = (error) => {
 }
 
 
+const calcMul = (price, value) => price * value;
+
+
 const calcSum = (arr) => {
     let sum = 0;
     arr.forEach(num => {
@@ -84,3 +99,4 @@ const calcSum = (arr) => {
     });
     return sum;
 }
+
