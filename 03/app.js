@@ -2,19 +2,22 @@ import {files} from './data.js';
 
 const sizeOfAll = () => {
 let sum = 0;
-files.forEach(files => {
+files.forEach(file => {
 const {
-    size,
-} = files;
+    size: {
+        length,
+        unit,
+    }
+} = file;
 
-    if (size.unit === undefined) {
-    sum += sum + size.length;
-    } if (size.unit === 'KB') {
-        sum += sum + size.length * 1024;
-    } if (size.unit === 'MB') {
-        sum += sum + size.length * 1024 * 1024;
-    } if (size.unit === 'GB') {
-        sum += sum + size.length * 1024 * 1024 * 1024;
+    if (unit === undefined) {
+    sum += sum + length;
+    } if (unit === 'KB') {
+        sum += sum + length * 1024;
+    } if (unit === 'MB') {
+        sum += sum + length * 1024 * 1024;
+    } if (unit === 'GB') {
+        sum += sum + length * 1024 * 1024 * 1024;
     } 
 })
 console.log(`Pliki zajmują ${sum} B`);

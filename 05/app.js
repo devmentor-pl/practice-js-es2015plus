@@ -19,16 +19,16 @@ const time = programmer.getApproximateTimeTaskDoneInHours( task );
 console.log(time);
 
 
-const junior = new Junior(features);
+const junior = new Junior();
 const juniorTime = junior.getApproximateTimeTaskDoneInHours( task );
 console.log(`Czas potrzebny juniorowi na wykonanie zadania: ${juniorTime}`);
 
 
-const mid = new Mid(features);
+const mid = new Mid();
 const midTime = mid.getApproximateTimeTaskDoneInHours( task );
 console.log(`Czas potrzebny midowi na wykonanie zadania: ${midTime}`);
 
 
-const senior = new Senior(features);
+const senior = new Senior();
 const seniorTime = senior.getApproximateTimeTaskDoneInHours( task );
 console.log(`Czas potrzebny seniorowi na wykonanie zadania: ${seniorTime}`)
