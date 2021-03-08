@@ -20,6 +20,6 @@ admin2.register(); // done
 
 &nbsp;
 
-> :arrow_left: [*poprzednie zadanie*](./../04) | [*następne zadanie*](./../05) :arrow_right:
+> :arrow_left: [*poprzednie zadanie*](./../03) | [*następne zadanie*](./../05) :arrow_right:
 
 > :no_entry: *Jeśli nie posiadasz materiałów do tego zadania, znajdziesz je na stronie [devmentor.pl](https://devmentor.pl/p/js-basics/)*
