@@ -1,8 +1,8 @@
-# [![](../assets/img/logo-readme2.jpg)](https://devmentor.pl) &nbsp; JavaScript: ECMAScript2015+ #03
-
-> :loudspeaker: Jeśli chciałbyś więcej tego typu zadań to zapraszam do :moneybag: [wsparcia mojego konta](https://github.com/sponsors/devmentor-pl)!
+> :star: *Jeśli będziesz mieć problem z rozwiązaniem tego zadania, poproś o pomoc na odpowiednim kanale na Slacku, tj. `#s1e08-js-es2015plus` (dotyczy [mentee](https://devmentor.pl/mentoring-javascript/) oraz posiadaczy [kursu JavaScript](https://devmentor.pl/p/javascript-for-beginners/)) lub na [dedykowanej grupie fb](https://www.facebook.com/groups/155234921740033). Pamiętaj, aby treść Twojego wpisu spełniała [odpowiednie kryteria](https://devmentor.pl/jak-prosic-o-pomoc/).*
 
 &nbsp;
+
+# `#03` JavaScript: ECMAScript2015+
 
 W pliku `app.js` importujemy dane, które zawierają informacje o plikach i ich rozmiarze. Każda plik ma inaczej zapisany rozmiar. Domyślnie wielkość pliku jest zapisywana w bajtach [B]. Dla przypomnienia *1KB = 1024B*, *1MB = 1024KB* itp.
 
@@ -12,7 +12,9 @@ Wykorzystaj destrukturyzację oraz wartości domyślne przy pobieraniu danych.
 
 Podziel zadanie na mniejsze części, które będą wykonywane przez niezależne funkcje.
 
+
 &nbsp;
 
-> :warning: Jeśli nie posiadasz materiałów do tego zadania to znajdziesz je na stronie [devmentor.pl](https://devmentor.pl/p/js-es2015plus/)
+> :arrow_left: [*poprzednie zadanie*](./../02) | [*następne zadanie*](./../04) :arrow_right:
 
+> :no_entry: *Jeśli nie posiadasz materiałów do tego zadania, znajdziesz je na stronie [devmentor.pl](https://devmentor.pl/p/js-basics/)*
