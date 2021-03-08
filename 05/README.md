@@ -2,7 +2,7 @@
 
 &nbsp;
 
-# `#04` JavaScript: ECMAScript2015+
+# `#05` JavaScript: ECMAScript2015+
 
 Mamy utworzoną klasę `Programmer`, która reprezentuje programistę z 3 cechami tj. poziom umiejętności (*skills*), doświadczenie (*experience**) i chęć do rozwiązania zadania (*willingness*). Na podstawie tych cech, których przedział wartości jest od 0 do 100, możemy określić w przybliżeniu czas rozwiązania danego problemu. 
 
