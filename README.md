@@ -21,7 +21,7 @@ Jeśli chcesz zacząć pracę jako programista JS musisz poznać rozwiązania do
 
 &nbsp;
 
-:arrow_left: [*poprzedni zestaw zadań (**JavaScript: Forms**)*](https://github.com/devmentor-pl/practice-js-forms)
+:arrow_left: [*poprzedni zestaw zadań (**JavaScript: Formularze**)*](https://github.com/devmentor-pl/practice-js-forms)
 
 ## Jak prawidłowo wykonać zadania?
 
