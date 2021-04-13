@@ -1,4 +1,4 @@
-const taskNumber = null;
+const taskNumber = '05';
 //numer przerabianego zadania
 
 const path = require('path');
@@ -26,9 +26,10 @@ module.exports = {
                 // określam jaki [loader]
                 // ma być wykorzystany
             }
-        ]
+        ],
         // obecnie brak dodatkowych ustawień
     },
+    watch: true,
     plugins: [
         new HtmlWebpackPlugin({
             template: `./${taskNumber}/index.html`,
@@ -36,6 +37,7 @@ module.exports = {
             filename: 'index.html'
             // określan nazwę dla pliku
         })
-    ]
+    ],
+    //mode: 'development',
 }
 // eksportuję ustawienia dla webpack-a
