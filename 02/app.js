@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 const count = () => {
     const inputs = [...document.getElementsByClassName('cart__quantity')];
-    let totalCost = 0;
+    let totalValue = 0;
     inputs.forEach(({value: amount, dataset: {price: price}}) => {
         const value = amount * price;
         totalValue += value;
@@ -15,7 +15,7 @@ const count = () => {
 
 const displayTotalCost = totalValue => {
     const totalPrice = document.querySelector('.cart__total-price');
-    totalPrice.textContent = totalCost;
+    totalPrice.textContent = totalValue;
 }
 
 
