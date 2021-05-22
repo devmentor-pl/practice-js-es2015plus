@@ -25,8 +25,8 @@ inputs.forEach(e => {
 });
 
 // only 0-9 characters
-const numberOnly = (e => {
-	let key = e.keyCode;
+const numberOnly = (event => {
+	let key = event.keyCode;
 	return ((key >= 48 && key <= 57) || key == 8);
 });
 
