@@ -1,45 +1,4 @@
-// import User from './User.js';
-
-class User {
-    constructor( {login = '', password = ''} ) {
-        this.login = login;
-        this.password = password;
-    }
-
-    register() {
-        if(this.isValid()) {
-            console.log('done');
-            return true;
-        }
-
-        console.log('error');
-        return false;
-    }
-
-    isValid() {
-        if(this.isLoginCorrect() && this.isPasswordCorrect()) {
-            return true;
-        }
-
-        return false;
-    }
-
-    isLoginCorrect() {
-        if(this.login.includes('@')) {
-            return true;
-        }
-
-        return false;
-    }
-
-    isPasswordCorrect() {
-        if(this.password.length >= 6) {
-            return true;
-        }
-
-        return false;
-    }
-}
+import User from './User.js';
 
 const userData = { login: 'user@devmentor.pl', password: '123456' }
 const adminData = { login: 'admin@devmentor.pl', password: '1234567890' }

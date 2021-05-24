@@ -1,38 +1,4 @@
-// import {files} from './data.js';
-
-// nie importuje danych z data.js
-// w konsoli wyświetla komunikat: Uncaught SyntaxError: Cannot use import statement outside a module
-
-const files = [
-    {
-        'name': 'img1.jpg',
-        'size': {
-            length: 215,
-        }
-    },
-    {
-        'name': 'img2.jpg',
-        'size': {
-            length: 145,
-            unit: 'KB',
-        }
-    },
-    {
-        'name': 'img3.jpg',
-        'size': {
-            length: 14,
-            unit: 'MB',
-        }
-    },
-    {
-        'name': 'img4.jpg',
-        'size': {
-            length: 0.9,
-            unit: 'GB',
-        }
-    }
-];
-
+import {files} from './data.js';
 
 let fileSize = 0;
 
