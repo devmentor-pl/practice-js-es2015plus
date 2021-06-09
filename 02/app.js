@@ -18,8 +18,8 @@ const getValue = () => {
             value: quantity,
         } = element;
         
-        const multi = getSum(price, quantity)
-        sum = sum + multi
+        const multi = getSum(price, quantity);
+        sum = sum + multi;
     
     });
 
