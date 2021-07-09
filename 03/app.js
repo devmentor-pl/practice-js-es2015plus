@@ -25,16 +25,19 @@ files.forEach(file => {
         console.log(`${name} ma ${sum}B `)
     }
 
+
     if (file.size.unit === 'KB') {
         sum += size.length;
         console.log(`${name} ma ${sum}B`);
     }
+
 
     if (file.size.unit === 'MB') {
         sum += size.length * KB;
         console.log(`${name} ma ${sum}B`);
     }
 
+    
     if (file.size.unit === 'GB') {
         sum += size.length * KB * KB;
         console.log(`${name} ma ${sum}B`);
