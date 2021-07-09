@@ -1,4 +1,4 @@
-import {files} from './data.js';
+import { files } from './data.js';
 
 /* W pliku app.js importujemy dane, które zawierają informacje o plikach i ich rozmiarze. Każda plik ma inaczej zapisany rozmiar. Domyślnie wielkość pliku jest zapisywana w bajtach [B]. Dla przypomnienia 1KB = 1024B, 1MB = 1024KB itp.
 
@@ -8,35 +8,38 @@ Wykorzystaj destrukturyzację oraz wartości domyślne przy pobieraniu danych.
 
 Podziel zadanie na mniejsze części, które będą wykonywane przez niezależne funkcje. */
 
+let sum = 0;
+let KB = 1024;
 
-export const files = [
-    {
-        'name': 'img1.jpg',
-        'size': {
-            length: 215,
-        }
-    },
-    {
-        'name': 'img2.jpg',
-        'size': {
-            length: 145,
-            unit: 'KB',
-        }
-    },
-    {
-        'name': 'img3.jpg',
-        'size': {
-            length: 14,
-            unit: 'MB',
-        }
-    },
-    {
-        'name': 'img4.jpg',
-        'size': {
-            length: 0.9,
-            unit: 'GB',
-        }
+files.forEach(file => {
+
+    const {
+        size,
+        name,
+    } = file;
+
+
+
+    if (!file.size.unit) {
+        sum += size.length;
+        console.log(`${name} ma ${sum}B `)
     }
-];
+
+    if (file.size.unit === 'KB') {
+        sum += size.length;
+        console.log(`${name} ma ${sum}B`);
+    }
+
+    if (file.size.unit === 'MB') {
+        sum += size.length * KB;
+        console.log(`${name} ma ${sum}B`);
+    }
+
+    if (file.size.unit === 'GB') {
+        sum += size.length * KB * KB;
+        console.log(`${name} ma ${sum}B`);
+    }
+});
+
 
 
