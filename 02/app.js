@@ -1,23 +1,24 @@
 const totalPriceEl = document.querySelector('.cart__total-price');
 const btn = document.querySelector('.cart__btn-calculate');
 const productListEl = [...document.getElementsByClassName('cart__quantity')];
-const ulEl = document.querySelector('ul');
+
+const init = () => {
+    btn.addEventListener('click', countPrice);
+}
 
 const countPrice = () => {
     let totalPrice = 0;
-    if (!checkNumbers) {
-        productListEl.forEach((item) => {
+    productListEl.forEach((item) => {
+        if (checkNumbers(Number(item.value))) {
             totalPrice += item.value * item.dataset.price;
-        })
-        totalPriceEl.innerHTML = totalPrice;
-    }
+        }
+    })
+    totalPriceEl.innerHTML = totalPrice;
 }
 
-btn.addEventListener('click', countPrice);
-
-const checkNumbers = (e) => {
+const checkNumbers = (num) => {
     errors = [];
-    if (Number.isNaN(Number(e.target.value)) || Number(e.target.value) < 0) {
+    if (Number.isNaN(num) || Number(num) < 0) {
         errors.push('Podano błędnie liczbę produktów');
     }
     if (errors.length > 0) {
@@ -26,4 +27,4 @@ const checkNumbers = (e) => {
     return errors.length > 0 ? false : true;
 };
 
-ulEl.addEventListener('change', checkNumbers);
+document.addEventListener('DOMContentLoaded', init);
