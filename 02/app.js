@@ -9,8 +9,15 @@ const init = () => {
 const countPrice = () => {
     let totalPrice = 0;
     productListEl.forEach((item) => {
-        if (checkNumbers(Number(item.value))) {
-            totalPrice += item.value * item.dataset.price;
+        const {
+            price
+        } = item.dataset
+        const {
+            value
+        } = item;
+        if (checkNumbers(Number(value))) {
+            totalPrice += value * price;
+            console.log(totalPrice);
         }
     })
     totalPriceEl.innerHTML = totalPrice;
