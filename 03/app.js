@@ -21,14 +21,15 @@ const changeSize = (length, unit) => {
     switch (unit) {
         case 'B':
             sizeInBytes = length;
+            break;
         case 'KB':
             sizeInBytes = length * 1024;
             break;
         case 'MB':
-            sizeInBytes = length * 1024 * 1024;
+            sizeInBytes = length * 1024 ** 2;
             break;
         case 'GB':
-            sizeInBytes = length * 1024 * 1024 * 1024;
+            sizeInBytes = length * 1024 ** 3;
             break;
         default:
             break;
