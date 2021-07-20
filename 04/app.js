@@ -7,10 +7,6 @@ const user = new User(userData);
 user.register();
 
 class Admin extends User {
-  constructor(login, password) {
-    super(login, password);
-  }
-
   isPasswordCorrect() {
     if (this.password.length >= 10) {
       return true;

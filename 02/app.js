@@ -5,9 +5,13 @@ const btnCalculatePrice = document.querySelector(".cart__btn-calculate");
 btnCalculatePrice.addEventListener("click", () => {
   const totals = [];
   inputs.forEach((input) => {
-    const { price } = input.dataset;
-    const qt = input.value;
-    const sum = +price * +qt;
+    const {
+      value,
+      dataset: { price },
+    } = input;
+    console.log(value, price);
+    //const qt = input.value;
+    const sum = +price * +value;
     totals.push(sum);
   });
   const total = totals.reduce((a, b) => a + b, 0);
