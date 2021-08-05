@@ -11,6 +11,10 @@ Jeśli chcesz zacząć pracę jako programista JS musisz poznać rozwiązania do
 
 &nbsp;
 
+> **Uwaga!** Podczas współpracy paczki webpack w wersji 5 oraz webpack-dev-server w wersji 3 może pojawić się problem z automatycznym odświeżaniem przeglądarki po wprowadzeniu zmian w plikach źródłowych. Rozwiązanie znajdziesz w [zakładce issues na GH](https://github.com/webpack/webpack-dev-server/issues/2758).
+
+&nbsp;
+
 ## Zadania
 
 > :fire: *Raz w tygodniu wykonuję **bezpłatny [Code Review](https://en.wikipedia.org/wiki/Code_review)** wybranej losowo osobie, która nie współpracuje ze mną w ramach [mentoringu](https://devmentor.pl/mentoring-javascript/). Zrób [Pull Request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork) i weź udział w losowaniu. Życzę Ci efektywnej nauki programowania! Pozdrawiam, [Mateusz Bogolubow](https://www.linkedin.com/in/mateusz-bogolubow/).*
