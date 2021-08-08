@@ -35,7 +35,7 @@ const convertSizeToB = (value,unit) => {
         return parseInt(value * 1073741824);
     }
     else {
-        return value
+        return parseInt(value);
     }
 }
 
