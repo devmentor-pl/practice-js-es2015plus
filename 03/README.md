@@ -4,13 +4,14 @@
 
 # `#03` JavaScript: ECMAScript2015+
 
-W pliku `app.js` importujemy dane, które zawierają informacje o plikach i ich rozmiarze. Każda plik ma inaczej zapisany rozmiar. Domyślnie wielkość pliku jest zapisywana w bajtach [B]. Dla przypomnienia *1KB = 1024B*, *1MB = 1024KB* itp.
+W pliku `app.js` importujemy dane, które zawierają informacje o plikach i ich rozmiarze. Rozmiar każdego pliku jest zapisany inaczej. Domyślnie, gdy nie ma podanej jednostki (`unit`), wielkość pliku jest określana w bajtach [B].
 
-Twoim zadaniem jest napisanie funkcji strzałkowej, która obliczy sumę zajmowanej przestrzeni przez wszystkie pliki. Pamiętaj, aby sprowadzić rozmiary do tej samej jednostki przed wykonaniem obliczeń.
+Twoim zadaniem jest napisanie funkcji strzałkowej, która obliczy sumę przestrzeni zajmowanej przez wszystkie pliki. Pamiętaj, aby przed wykonaniem obliczeń sprowadzić rozmiary do tej samej jednostki.
+Dla przypomnienia *1KB = 1024B*, *1MB = 1024KB* itp.
 
-Wykorzystaj destrukturyzację oraz wartości domyślne przy pobieraniu danych.
+Przy pobieraniu danych wykorzystaj destrukturyzację oraz wartości domyślne.
 
-Podziel zadanie na mniejsze części, które będą wykonywane przez niezależne funkcje.
+Zaimplementowane rozwiązanie podziel na mniejsze części, które będą wykonywane przez niezależne funkcje.
 
 
 &nbsp;
