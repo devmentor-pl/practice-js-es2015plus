@@ -4,13 +4,22 @@
 
 # `#05` JavaScript: ECMAScript2015+
 
-Mamy utworzoną klasę `Programmer`, która reprezentuje programistę z 3 cechami tj. poziom umiejętności (*skills*), doświadczenie (*experience**) i chęć do rozwiązania zadania (*willingness*). Na podstawie tych cech, których przedział wartości jest od 0 do 100, możemy określić w przybliżeniu czas rozwiązania danego problemu. 
+Mamy klasę `Programmer`, która reprezentuje programistę z 3 cechami:
+- poziomem umiejętności (*skills*),
+- doświadczeniem (*experience*),
+- chęcią do rozwiązania zadania (*willingness*).
 
-Samo zadanie posiada 2 cechy na podstawie, których obliczamy czas rozwiązania tj. trudność zadania i jego rozmiar z przedziału od 1 do 3.
+Na podstawie tych cech, których wartości zawierają się w przedziale od 0 do 100, możemy określić w przybliżeniu czas rozwiązania danego problemu. 
 
-W pliku `./app.js` jest przykład użycia wspomnianej klasy.
+Samo zadanie posiada 2 cechy, na podstawie których obliczamy czas rozwiązania:
+- trudność zadania,
+- rozmiar zadania.
 
-Twoim zdaniem jest napisanie klas `Junior`, `Mid`, `Senior`, które wykorzystują rozwiązania dostępne w `Programmer` jednak ich cechy mogą być losowane z konkretnego przedziału, co ma być wykonywane podczas tworzenia obiektu na podstawie konkretnej klasy, jeśli któraś z cech nie zostanie przekazana do konstruktora.
+Wartości dla obu tych cech mieszczą się w przedziale od 1 do 3.
+
+W pliku `./app.js` znajdziesz przykład użycia omawianej klasy.
+
+Twoim zdaniem jest stworzenie klas `Junior`, `Mid` i `Senior`, które wykorzystują rozwiązania dostępne w klasie `Programmer`. Jeśli któraś z cech nie zostanie przekazana do konstruktora podczas tworzenia obiektu, to zakres jej wartości powinien być wylosowany z konkretnego przedziału: 
 
 * Junior
     * skills: 0-30 
@@ -25,7 +34,7 @@ Twoim zdaniem jest napisanie klas `Junior`, `Mid`, `Senior`, które wykorzystuj�
     * experience: 60-90 
     * willingness: 40-60 
 
-Następnie sprawdź ile czasu będzie potrzeba na wykonanie konkrentego zadania przez programistę na każdym z poziomów zaawansowania.
+Następnie sprawdź, ile czasu będzie potrzeba na wykonanie konkretnego zadania przez programistę na każdym z poziomów zaawansowania.
 
 &nbsp;
 
