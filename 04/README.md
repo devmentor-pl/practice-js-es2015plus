@@ -4,9 +4,11 @@
 
 # `#04` JavaScript: ECMAScript2015+
 
-Obecnie posiadamy napisaną klasę `User` pozwalającą rejestrować użytkowników, którzy wpisali poprawne dane. Poprawnymi danymi jest login zawierający znak `@` oraz hasło składające się z co najmniej 6 znaków.
+W plikach tego zadania znajdziesz klasę `User`, która pozwala zarejestrować użytkownika po wpisaniu poprawnych danych. Poprawnymi danymi są:
+- login zawierający znak @,
+- hasło składające się z co najmniej 6 znaków.
 
-Twoim zdaniem jest napisać w osobnym pliku drugą klasę o nazwie `Admin`, która będzie miała bardziej restykcyjne warunki tj. hasło będzie musiało się składać z co najmniej 10 znaków. Wykorzystaj klasę `User` do zbudowania klasy `Admin`.
+W osobnym pliku stwórz drugą klasę o nazwie `Admin`, która będzie miała bardziej restrykcyjne warunki: hasło będzie musiało składać się z co najmniej 10 znaków. Wykorzystaj klasę `User` do zbudowania klasy `Admin`.
 
 Klasa `Admin` ma działać w taki sposób, że wywołanie poniższego kodu spowoduje wyświetlenie w konsoli `error` dla pierwszej części i `done` dla drugiej.
 
