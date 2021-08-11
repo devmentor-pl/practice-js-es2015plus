@@ -4,16 +4,16 @@
 
 # `#02` JavaScript: ECMAScript2015+
 
-Twoim zadaniem będzie napisanie programu, który obliczy sumę jaką klient powinien zapłacić za zakupy.
+Twoim zadaniem będzie napisanie programu, który obliczy sumę, jaką klient powinien zapłacić za zakupy.
 
-Zwróć uwagę, że do `<input>` jest wpisywana ilość, a w `dataset` jest zamieszczona cena.
+Zwróć uwagę, że w elemencie `<input>` jest wpisywana ilość, a w `dataset` jest zamieszczona cena.
 
 Po kliknięciu w przycisk `.cart__btn-calculate` należy obliczyć łaczną cenę zakupionych produktów i wstawić ją do `.cart__total-price`.
 
 Zadanie należy wykonać zgodnie z poniższymi wytycznymi:
-* wszędzie gdzie potrzebujesz użyć funkcji, użyj funkcji strzałkowej
-* elementy `<input>` wyszukaj za pomocą `document.getElementsByClassName` i wykorzystaj `forEach` do iteracji 
-* w momencie pobierania danych z obiektów używaj destrukturyzacji
+* wszędzie, gdzie trzeba użyć funkcji, użyj funkcji strzałkowej,
+* elementy `<input>` wyszukaj za pomocą `document.getElementsByClassName` i wykorzystaj `forEach` do iteracji,
+* w momencie pobierania danych z obiektów używaj destrukturyzacji.
 
 
 
