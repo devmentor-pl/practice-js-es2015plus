@@ -1,17 +1,16 @@
-
 > :dart: *Chcę mieć absolutną pewność, że **darmowe materiały**, które publikuję, spełniają Twoje oczekiwania. Dlatego oferuję Ci ebooka o wartości 39 PLN: `Jak zostać programistą? SKUTECZNY PRZEWODNIK` w zamian za [wypełnienie ankiety](https://devmentor.pl/ankieta).*
 
 &nbsp;
 
 # JavaScript: ECMAScript2015+
 
-Trzeba przyznać, że standard *ES2015* tj. *ES6* wniósł do świata *JavaScript* bardzo dużo. Obecnie rozwiązania zaproponowane w tej specyfikacji są na co dzień wykorzystywane przez programistów i nie wyobrażają sobie oni pracy bez tych usprawnień.
+Trzeba przyznać, że standard *ES2015*, tj. *ES6*, wniósł do świata JavaScriptu bardzo dużo usprawnień. Obecnie rozwiązania zaproponowane w tej specyfikacji są na co dzień wykorzystywane przez programistów i nie wyobrażają sobie oni pracy bez nich.
 
-Jeśli chcesz zacząć pracę jako programista JS musisz poznać rozwiązania dostępne w wersji *ES2015* i nowszych. Oczywiście nie zawsze przeglądarki nadążają ze zmianami dlatego nasz nowoczesny kod będziemy poddawać transpilacji przy pomocy *Webpacka*. 
+Jeśli chcesz zacząć pracę jako programista JS, musisz poznać rozwiązania dostępne w wersji *ES2015* i nowszych. Oczywiście przeglądarki nie zawsze nadążają ze zmianami, dlatego nasz nowoczesny kod będziemy poddawać transpilacji przy pomocy *webpacka*. 
 
 &nbsp;
 
-> **Uwaga!** Podczas współpracy paczki webpack w wersji 5 oraz webpack-dev-server w wersji 3 może pojawić się problem z automatycznym odświeżaniem przeglądarki po wprowadzeniu zmian w plikach źródłowych. Rozwiązanie znajdziesz w [zakładce issues na GH](https://github.com/webpack/webpack-dev-server/issues/2758).
+**Uwaga!** Podczas współpracy paczek webpack w wersji 5 oraz webpack-dev-server w wersji 3 może pojawić się problem z automatycznym odświeżaniem przeglądarki po wprowadzeniu zmian w plikach źródłowych. Rozwiązanie tego problemu znajdziesz w [zakładce issues na GH](https://github.com/webpack/webpack-dev-server/issues/2758).
 
 &nbsp;
 
