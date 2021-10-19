@@ -1,4 +1,4 @@
-import Programmer from './classes/Programmer';
+import Programmer from './Programmer';
 
 export default class Junior extends Programmer {
 	getMinMaxSkills() {

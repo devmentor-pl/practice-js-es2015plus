@@ -18,6 +18,14 @@ const programmer = new Programmer(features);
 const time = programmer.getApproximateTimeTaskDoneInHours(task);
 console.log(time);
 
-// const junior = new Junior();
-// const time = junior.getApproximateTimeTaskDoneInHours(task);
-// console.log(time);
+const junior = new Junior();
+const timeJunior = junior.getApproximateTimeTaskDoneInHours(task);
+console.log(`Junior time is ${timeJunior}`);
+
+const mid = new Mid();
+const timeMid = mid.getApproximateTimeTaskDoneInHours(task);
+console.log(`Mid time is ${timeMid}`);
+
+const senior = new Senior();
+const timeSenior = senior.getApproximateTimeTaskDoneInHours(task);
+console.log(`Senior time is ${timeSenior}`);
