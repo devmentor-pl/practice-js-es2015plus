@@ -7,8 +7,7 @@ export default class Programmer {
 
     isNumber(value) {
         if(
-            typeof value === 'number'
-            && value === value // NaN === NaN => false
+            typeof value === 'number' && value === value // NaN === NaN => false
         ) {
             return true;
         }
