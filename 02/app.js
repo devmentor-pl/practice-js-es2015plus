@@ -6,8 +6,8 @@ const inputElementsArr = [...inputElements];
 
 const countFinalPrice = () => {
   let totalValueOfProducts = [];
-  inputElementsArr.forEach((item, index) => {
-    const price = item.dataset.price;
+  inputElementsArr.forEach((item) => {
+    const { price } = item.dataset;
     const numberOfProducts = item.value;
 
     let priceOfProduct = price * numberOfProducts;
