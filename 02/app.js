@@ -12,9 +12,6 @@ numberItem.forEach(item => item.addEventListener('change',getNumberAndPrice));
 function getNumberAndPrice(e){
     numberArray.push(e.target.value);
     priceArray.push(e.target.dataset.price);
-
-    console.log(numberArray);
-    console.log(priceArray);
 }
 
 calculateButton.addEventListener('click',function(){
