@@ -3,7 +3,6 @@ export const files = [
         'name': 'img1.jpg',
         'size': {
             length: 215,
-            unit:'B',
         }
     },
     {
