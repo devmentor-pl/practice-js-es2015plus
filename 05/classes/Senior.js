@@ -1,12 +1,7 @@
 import Programmer from "./Programmer";
 
 export default class Senior extends Programmer{
-    constructor( {skills = null, experience = null, willingness = null} = {} ) {
-        super(skills,experience,willingness);
-        this.skills = this.isNumber(skills) ? skills : this.getSkillsRandomNumber();
-        this.experience = this.isNumber(experience) ? experience : this.getExperienceRandomNumber();
-        this.willingness = this.isNumber(willingness) ? willingness : this.getWillingnessRandomNumber();
-    }
+
     getMinMaxSkills() {
         return [50, 90];
     }
