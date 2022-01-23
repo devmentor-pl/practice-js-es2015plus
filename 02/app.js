@@ -2,9 +2,9 @@ const qtyList = document.getElementsByClassName("cart__quantity");
 const qtyArray = [ ...qtyList];
 const btn = document.querySelector(".cart__btn-calculate");
 const totalSpan = document.querySelector(".cart__total-price");
-total = [];
 
 btn.addEventListener("click", function() {
+    total = []
     qtyArray.forEach(input => {
         const {
         value: singleAmount,
