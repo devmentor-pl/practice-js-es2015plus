@@ -1,4 +1,4 @@
-const taskNumber = null;
+const taskNumber = '04';
 //numer przerabianego zadania
 
 const path = require('path');
@@ -14,14 +14,14 @@ module.exports = {
         filename: 'app.min.js',
         // definiuję nazwę pliku wyjściowego
     },
-    target: "web", 
+    target: "web",
     // niezbędne do uruchomienia automatycznego odświeżania z webpack-dev-server@3
     // https://github.com/webpack/webpack-dev-server/issues/2758
     module: {
         rules: [
             {
                 test: /\.js$/,
-                // określam jakie pliki 
+                // określam jakie pliki
                 // będą brane pod uwagę
                 exclude: /node_modules/,
                 // określam wykluczenia
