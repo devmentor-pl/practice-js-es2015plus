@@ -6,7 +6,7 @@
 
 Twoim zadaniem jest uruchomienie *webpacka*, który będzie wykonywał transpilację utworzonego kodu JavaScript.
 
-W pliku `./webpack.config.js` (w katalogu głównym) znajdziesz gotową konfigurację *webpacka*. Jest tam zmienna `taskNumber` przechowująca informację o zadaniu, które w danym momencie wykonujesz.
+W pliku `./webpack.config.js` (w katalogu głównym) znajdziesz gotową konfigurację *webpacka*. Jest tam zmienna `taskNumber` przechowująca informację o zadaniu, które w danym momencie wykonujesz.np
 
 Przed przejściem do kolejnego zadania będziesz musiał zmodyfikować zawartość tej zmiennej i ponownie uruchomić tryb developerski. Wiesz jak to zrobić? Gdzie zapisany jest skrót do odpowiedniej komendy?
 
