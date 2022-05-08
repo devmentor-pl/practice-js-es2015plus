@@ -12,3 +12,4 @@ const admin1 = new Admin(userData);
 admin1.register();
 const admin2 = new Admin(adminData);
 admin2.register();
+console.log(admin2)
