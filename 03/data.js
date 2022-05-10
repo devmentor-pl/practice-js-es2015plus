@@ -1,4 +1,4 @@
-export const files = [
+ const files = [
     {
         'name': 'img1.jpg',
         'size': {
@@ -27,3 +27,5 @@ export const files = [
         }
     }
 ];
+
+export default files;
