@@ -10,14 +10,12 @@ const calculateValues = () => {
         const calculatedValue = price*amount;
         valuesArr.push(calculatedValue);
     });
-    console.log(valuesArr);
     return valuesArr;
 }
 
 const calculatedSum = () => {
     let valuesArr = calculateValues();
     const [a, b, c, d] = valuesArr;
-    console.log(a, b, c, d);
     let sum = a + b + c + d;
     /*valuesArr.forEach( item => {
         sum += item;        
