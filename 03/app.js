@@ -29,19 +29,6 @@ const getFiles = files => {
         console.log(name, length, unit)
 
         totalSize += addSize(length, unit)
-
-        // if(unit === undefined) {
-        //     totalSize += length
-        // }
-        // if(unit === 'KB') {
-        //     totalSize += length * 1024
-        // }
-        // if(unit === 'MB') {
-        //     totalSize += length * 1024 * 1024
-        // }
-        // if(unit === 'GB') {
-        //     totalSize += length * 1024 * 1024 * 1024
-        // }
     
     })
     console.log('---- total Size ----')
@@ -54,14 +41,14 @@ const getFiles = files => {
 getFiles(files)
 
 
-// results
+// results without fn
 // ----------------
 // 981196400.60 B
 // 958199.61 KB
 // 935.74 MB
 // 0.91 GB
 
-// result with using fn OKEY
+// result with using fn - OKEY
 // ----------------
 // 981196400.60 B
 // 958199.61 KB
