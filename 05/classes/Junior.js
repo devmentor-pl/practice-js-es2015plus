@@ -2,9 +2,6 @@ import Programmer from './Programmer'
 
 class Junior extends Programmer{
     constructor({skills = null, experience = null, willingness = null} = {}) {
-        // super( {skills} = {skills})
-        // super( {skills} )
-        // super({skills} = { skills: 4 === 4 ? 5 : 3 })
         super(
             {skills} = { skills: skills ? skills : Math.floor(Math.random() * (30 - 0 + 1) + 0)},
             {experience} = { experience: experience ? experience : Math.floor(Math.random() * (30 - 0 + 1) + 0)},
@@ -38,11 +35,6 @@ class Junior extends Programmer{
     }
 }
 export default Junior
-
-
-// const {skills} = { skills: 4 === 4 ? 5 : 3 }
-
-
 
 
 
