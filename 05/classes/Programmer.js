@@ -1,6 +1,6 @@
 export default class Programmer {
     constructor( {skills = null, experience = null, willingness = null} = {} ) {
-        this.skills = this.isNumber(skills) ? skills : this.getSkillsRandomNumber();
+        this.skills = this.isNumber(skills) ? skills : this.getSkillsRandomNumber()
         this.experience = this.isNumber(experience) ? experience : this.getExperienceRandomNumber();
         this.willingness = this.isNumber(willingness) ? willingness : this.getWillingnessRandomNumber();
     }
@@ -10,10 +10,10 @@ export default class Programmer {
             typeof value === 'number'
             && value === value // NaN === NaN => false
         ) {
-            return true;
+            return true
         }
 
-        return false;
+        return false
     }
 
     getSkillsRandomNumber() {

@@ -1,7 +1,16 @@
 const message = {
-    text: (text => text)('Webpack działa! Gratulacje!'),
+    text: (text => text)('Webpack działa! Gratulacje!!!'),
 }
 
-const { text } = { ...message };
+const { text } = { ...message }
 
-console.log( text );
+console.log( text )
+
+
+
+
+
+
+
+
+
