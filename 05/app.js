@@ -21,52 +21,49 @@ const time = programmer.getApproximateTimeTaskDoneInHours( task );
 console.log(time)
 
 
-// console.log('----- Junior -----')
-// const junior = new Junior( features )
-// junior.getTest()
+console.log('----- Junior -----')
+const junior = new Junior( features )
 
-// const skills = junior.getSkills()
-// console.log( 'Junior skills', skills )
+const skills = junior.getSkills()
+console.log( 'Junior skills', skills )
 
-// const experience = junior.getExperience()
-// console.log( 'Junior experience', experience )
+const experience = junior.getExperience()
+console.log( 'Junior experience', experience )
 
-// const willingness = junior.getWillingness()
-// console.log( 'Junior willingness', willingness )
+const willingness = junior.getWillingness()
+console.log( 'Junior willingness', willingness )
 
-// const timeJunior = junior.getApproximateTimeTaskDoneInHours( task );
-// console.log('timeJunior', timeJunior)
+const timeJunior = junior.getApproximateTimeTaskDoneInHours( task );
+console.log('timeJunior', timeJunior)
 
 
-// console.log('----- Mid -----')
-// const mid = new Mid( features )
-// mid.getTest()
+console.log('----- Mid -----')
+const mid = new Mid( features )
 
-// const skills = mid.getSkills()
-// console.log( 'mid skills', skills )
+const skillsMid = mid.getSkills()
+console.log( 'mid skills', skillsMid )
 
-// const experience = mid.getExperience()
-// console.log( 'mid experience', experience )
+const experienceMid = mid.getExperience()
+console.log( 'mid experience', experienceMid )
 
-// const willingness = mid.getWillingness()
-// console.log( 'mid willingness', willingness )
+const willingnessMid = mid.getWillingness()
+console.log( 'mid willingness', willingnessMid )
 
-// const timeMid = mid.getApproximateTimeTaskDoneInHours( task );
-// console.log('timeMid', timeMid)
+const timeMid = mid.getApproximateTimeTaskDoneInHours( task );
+console.log('timeMid', timeMid)
 
 
 console.log('----- Senior -----')
 const senior = new Senior( features )
-senior.getTest()
 
-const skills = senior.getSkills()
-console.log( 'senior skills', skills )
+const skillsSenior = senior.getSkills()
+console.log( 'senior skills', skillsSenior )
 
-const experience = senior.getExperience()
-console.log( 'senior experience', experience )
+const experienceSenior = senior.getExperience()
+console.log( 'senior experience', experienceSenior )
 
-const willingness = senior.getWillingness()
-console.log( 'senior willingness', willingness )
+const willingnessSenior = senior.getWillingness()
+console.log( 'senior willingness', willingnessSenior )
 
 const timeSenior = senior.getApproximateTimeTaskDoneInHours( task );
 console.log('timeSenior', timeSenior)

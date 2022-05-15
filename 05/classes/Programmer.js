@@ -44,10 +44,6 @@ export default class Programmer {
         return Math.floor(Math.random() * (max - min + 1) + min)
     }
 
-    getTest() {
-        console.log('test', this.skills)
-    }
-
     getApproximateTimeTaskDoneInHours( {difficult, size} ) {
         let counter = 0;
         let time = 0;
