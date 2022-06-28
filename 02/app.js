@@ -6,11 +6,12 @@ const inputElements = [...inputEl];
 
 const finalPrice = () => {
 	let totalValueProducts = [];
-	inputElements.forEach((item, index) => {
-		const price = item.dataset.price;
-		const numberOfProduct = item.value;
+	inputElements.forEach((item) => {
+		// const price = item.dataset.price;
+		// const numberOfProduct = item.value;
+		const {dataset: {price}, value} = item;
 
-		let priceOfProduct = price * numberOfProduct;
+		let priceOfProduct = price * value;
 		totalValueProducts.push(priceOfProduct);
 	});
 
