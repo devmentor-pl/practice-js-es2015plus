@@ -1,40 +1,40 @@
 export default class User {
-    constructor( {login = '', password = ''} ) {
-        this.login = login;
-        this.password = password;
-    }
+	constructor({ login = "", password = "" }) {
+		this.login = login;
+		this.password = password;
+	}
 
-    register() {
-        if(this.isValid()) {
-            console.log('done');
-            return true;
-        }
+	register() {
+		if (this.isValid()) {
+			console.log("done");
+			return true;
+		}
 
-        console.log('error');
-        return false;
-    }
+		console.log("error");
+		return false;
+	}
 
-    isValid() {
-        if(this.isLoginCorrect() && this.isPasswordCorrect()) {
-            return true;
-        }
+	isValid() {
+		if (this.isLoginCorrect() && this.isPasswordCorrect()) {
+			return true;
+		}
 
-        return false;
-    }
+		return false;
+	}
 
-    isLoginCorrect() {
-        if(this.login.includes('@')) {
-            return true;
-        }
+	isLoginCorrect() {
+		if (this.login.includes("@")) {
+			return true;
+		}
 
-        return false;
-    }
+		return false;
+	}
 
-    isPasswordCorrect() {
-        if(this.password.length >= 6) {
-            return true;
-        }
+	isPasswordCorrect() {
+		if (this.password.length >= 6) {
+			return true;
+		}
 
-        return false;
-    }
+		return false;
+	}
 }
