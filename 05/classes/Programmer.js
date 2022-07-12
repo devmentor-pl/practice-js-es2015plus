@@ -47,7 +47,8 @@ export default class Programmer {
     getApproximateTimeTaskDoneInHours( {difficult, size} ) {
         let counter = 0;
         let time = 0;
-        let rand;        
+        let rand;
+        console.log(`Programer: skills: ${this.skills}, experience: ${this.experience}, willingness: ${this.willingness}`)        
 
         const done = 5 * difficult * size;
         const chance = ( (0.5 * this.skills) + (0.3 * this.experience) + (0.2 * this.willingness)) / 3;
