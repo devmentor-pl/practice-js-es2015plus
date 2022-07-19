@@ -1,18 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const btnCalculate = document.querySelector('.cart__btn-calculate')   
+    const btnCalculate = document.querySelector('.cart__btn-calculate') 
+    const inputList = document.getElementsByClassName('cart__quantity') 
+    const totalPrice = document.querySelector('.cart__total-price') 
 
-    btnCalculate.addEventListener('click', () => {
-        const inputList = document.getElementsByClassName('cart__quantity')
+    if(btnCalculate && totalPrice) {
+        btnCalculate.addEventListener('click', () => {
+            let sum = 0
 
-        let sum = 0
-
-        Array.from(inputList).forEach(input => {
-            const {dataset: {price}, value} = input
+            Array.from(inputList).forEach(input => {
+                const {dataset: {price}, value} = input
+                
+                sum += price * value
+            })
             
-            sum += price * value
-        })
-
-        const totalPrice = document.querySelector('.cart__total-price')
-        totalPrice.innerText = sum
-    })   
+            totalPrice.innerText = sum
+        }) 
+    }  
 })
