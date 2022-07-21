@@ -1,15 +1,16 @@
 import { files } from "./data.js";
 
 const sizes = files.map((e) => {
-	switch (e.size.unit) {
+	const { unit, length } = e.size;
+	switch (unit) {
 		case "KB":
-			return e.size.length * 1024;
+			return length * 1024;
 		case "MB":
-			return e.size.length * Math.pow(1024, 2);
+			return length * Math.pow(1024, 2);
 		case "GB":
-			return e.size.length * Math.pow(1024, 3);
+			return length * Math.pow(1024, 3);
 		default:
-			return e.size.length;
+			return length;
 	}
 });
 

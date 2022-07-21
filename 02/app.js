@@ -2,13 +2,10 @@ const inputs = document.getElementsByClassName("cart__quantity");
 const totalPrice = document.querySelector(".cart__total-price");
 const calcBtn = document.querySelector(".cart__btn-calculate");
 
-const basket = [];
+let basket = [];
 
 const calcEachElement = (a, b) => {
 	return a * b;
-};
-const calcSum = (a, b) => {
-	return a + b;
 };
 
 const checkValue = () => {
@@ -18,9 +15,11 @@ const checkValue = () => {
 			Number(e.dataset.price)
 		);
 		basket.push(eachElement);
+		e.value = "";
 	});
-	const finalPrice = calcSum(...basket);
+	const finalPrice = basket.reduce((a, b) => a + b, 0);
 	totalPrice.textContent = finalPrice;
+	basket = [];
 };
 
 calcBtn.addEventListener("click", checkValue);
