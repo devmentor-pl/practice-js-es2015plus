@@ -9,7 +9,7 @@ W pliku `app.js` importujemy dane, które zawierają informacje o plikach i ich 
 Twoim zadaniem jest napisanie funkcji strzałkowej, która obliczy sumę przestrzeni zajmowanej przez wszystkie pliki. Pamiętaj, aby przed wykonaniem obliczeń sprowadzić rozmiary do tej samej jednostki.
 Dla przypomnienia *1KB = 1024B*, *1MB = 1024KB* itp.
 
-Przy pobieraniu danych wykorzystaj destrukturyzację oraz wartości domyślne.
+Przy pobieraniu danych wykorzystaj destrukturyzację oraz wartości /domyślne.
 
 Zaimplementowane rozwiązanie podziel na mniejsze części, które będą wykonywane przez niezależne funkcje.
 
