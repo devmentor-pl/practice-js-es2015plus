@@ -8,7 +8,7 @@ function convertToB(length, unit) {
         'GB': 1024 * 1024 * 1024,
     }
 
-    if (typeof data[unit] === 'undefined') {
+    if (typeof unitSize[unit] === 'undefined') {
         console.log('Unit is undefined.');
     }
 
@@ -26,9 +26,5 @@ const calculateTotalSize = () => {
     return totalSize;
 }
 
-files.calculateTotalSize();
-console.log(files.calculateTotalSize()
-)
-
-console.log(`Total sum of all files in bytes is ${calculateTotalSize}.`)
+console.log(`Total sum of all files in bytes is ${calculateTotalSize()}`)
 
