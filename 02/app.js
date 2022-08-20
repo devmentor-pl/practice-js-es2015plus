@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         calculateBtn.addEventListener('click', () => {
             let totalSum = 0;
 
-            Array.from(inputsList).forEach(input => {
+            [...(inputsList)].forEach(input => {
                 const { dataset: { price }, value } = input;
                 totalSum += price * value;
             });
