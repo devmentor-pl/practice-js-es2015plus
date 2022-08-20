@@ -27,3 +27,4 @@ export const files = [
         }
     }
 ];
+console.log(data);
