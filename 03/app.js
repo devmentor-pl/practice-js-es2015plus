@@ -8,7 +8,7 @@ function convertToB(length, unit) {
         'GB': 1024 * 1024 * 1024,
     }
 
-    if (typeof unitSize[unit] === 'undefined') {
+    if (typeof [unit] === 'undefined') {
         console.log('Unit is undefined.');
     }
 
