@@ -12,7 +12,6 @@ export default class Programmer {
         ) {
             return true;
         }
-
         return false;
     }
 
@@ -50,6 +49,7 @@ export default class Programmer {
         let rand;        
 
         const done = 5 * difficult * size;
+        // console.log(this.skills, this.experience, this.willingness)
         const chance = ( (0.5 * this.skills) + (0.3 * this.experience) + (0.2 * this.willingness)) / 3;
         while(counter < done && time < 1000) {
             rand = this.getRandomNumber(0, 100);
