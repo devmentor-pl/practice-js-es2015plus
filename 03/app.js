@@ -10,6 +10,11 @@ function convertLarge(lenght ,unit = 'B'){
     }else if(unit ==='GB') {
         return lenght *1024 * 1024 * 1024;
     }
+
+    if(typeof data[unit] === 'undefined'){
+        console.log('This unit not exist');
+    }
+
     }
     
     let large = 0;
