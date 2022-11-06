@@ -22,14 +22,14 @@ console.log(time);
 
 const junior = new Junior();
 const timeJunior = junior.getApproximateTimeTaskDoneInHours( task );
-console.log(timeJunior);
+console.log(timeJunior ,'Czas Juniora');
 
 
 const mid = new Mid();
 const timeMid = mid.getApproximateTimeTaskDoneInHours( task );
-console.log(timeMid);
+console.log(timeMid, 'Czas Myida');
 
 
 const senior = new Senior();
 const timeSenior = senior.getApproximateTimeTaskDoneInHours( task );
-console.log(timeSenior);
+console.log(timeSenior, 'Czas Seniora');
