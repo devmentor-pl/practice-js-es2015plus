@@ -1,3 +1,4 @@
+import Junior from './classes/Junior';
 import Programmer from './classes/Programmer';
 
 const features = {
@@ -14,3 +15,7 @@ const task = {
 const programmer = new Programmer( features );
 const time = programmer.getApproximateTimeTaskDoneInHours( task );
 console.log(time);
+
+const junior = new Junior(features);
+const juniorTime = junior.getApproximateTimeTaskDoneInHours(task);
+console.log(juniorTime);
