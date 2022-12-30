@@ -1,3 +1,5 @@
+document.addEventListener('DOMContentLoaded', init);
+
 const totalPrice = document.querySelector('.cart__total-price');
 const btnCalculate = document.querySelector('.cart__btn-calculate');
 
@@ -22,13 +24,15 @@ const countTotalPrice = () => {
     totalPrice.innerText = total;
 }
 
-const validateInput = (item) => {
-    const quantity = parseInt(item.quantity)
-    const price = parseInt(item.price)
+const validateInput = (value) => {
+    let errors = [];
 
-    if(!Number.isNaN(quantity) && quantity >= 0) {
-        return quantity * price;
-    } else {
+    if(!Number.isNaN(value) && Number(value) >= 0) {
+        errors.push('Incorrect value');
+    } 
+    if (errors.length > 0) {
         alert('Please enter the correct quantity');
     }
+    return errors.length > 0 ? false : true;
 }
+
