@@ -1,7 +1,10 @@
 import {files} from './data.js';
 
+document.addEventListener('DOMContentLoaded', init);
+
 const init = () => {
-    calcTotalSize(files);
+    const result = calcTotalSize(files);
+    console.log(result);
 }
 
 const calcTotalSize = (files) => {
@@ -16,6 +19,7 @@ const calcTotalSize = (files) => {
         } = file;
         sum += convertSize(length, unit)
     });
+    return sum
 }
 
 const convertSize = (length, unit) => {
