@@ -53,4 +53,4 @@ const orderSummary = () => {
     return init();
 }
 
-document.querySelector('.cart__btn-calculate').addEventListener('click', orderSummary)
+document.querySelector('.cart__btn-calculate').addEventListener('click', orderSummary);
