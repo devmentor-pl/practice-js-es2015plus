@@ -23,7 +23,7 @@ const showEachLevelTime = () => {
     const ownFeatures = [
         {
             label: 'Junior',
-            features: { skills: null, experience: null, willingness: null, },
+            features: { skills: 20, experience: 10, willingness: 5, },
         },
         {
             label: 'Mid',
@@ -38,7 +38,7 @@ const showEachLevelTime = () => {
     // -----------------------------------------------------------------------------------
 
     const workers = [
-        { label: 'Junior', level: new Junior() },
+        { label: 'Junior', level: new Junior(junior.features) },
         { label: 'Mid', level: new Mid() },
         { label: 'Senior', level: new Senior() },
     ];
@@ -48,7 +48,7 @@ const showEachLevelTime = () => {
 
     workers.forEach(worker => {
         const { label, level } = worker;
-
+        console.log(worker);
         const time = timeNeeded(level);
 
         showTime(label, time);
