@@ -39,9 +39,10 @@ const getFilesSizeSum = () => {
         }
     }
 
-    const kbToB = (size) => size * 1024;
-    const mbToB = (size) => size * 1024 * 1024;
-    const gbToB = (size) => size * 1024 * 1024 * 1024;
+    const bPow = (n) => Math.pow(1024, n);
+    const kbToB = (size) => size * bPow(1);
+    const mbToB = (size) => size * bPow(2);
+    const gbToB = (size) => size * bPow(3);
 
 
     const init = () => {
