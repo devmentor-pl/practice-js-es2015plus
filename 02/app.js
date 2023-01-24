@@ -7,7 +7,7 @@ const orderSummary = () => {
     const createBasketItem = (item) => {
         const quantity = Number(item.value);
 
-        if (!isNaN(quantity) && quantity >= 0) {
+        if (!Number.isNaN(quantity) && quantity >= 0) {
 
             basketItem = {
                 quantity: quantity,
@@ -15,15 +15,21 @@ const orderSummary = () => {
             }
 
             return basketItem;
-        } else {
-            alert('Wprowadź poprawne dane!')
         }
     }
 
     const createBasket = () => {
         basket.length = 0;
 
-        inputList.forEach(input => basket.push(createBasketItem(input)));
+        inputList.forEach(input => {
+            const basketItem = createBasketItem(input);
+
+            if (basketItem) {
+                basket.push(basketItem);
+            } else {
+                alert('Wprowadź poprawne dane!');
+            }
+        });
     }
 
     const getProductsAmount = () => {
@@ -32,7 +38,7 @@ const orderSummary = () => {
         basket.forEach(item => {
             const { quantity, price } = item;
 
-            itemAmount.push(getProduct(quantity, price));
+            itemAmount.push(getMultiply(quantity, price));
         });
 
         return itemAmount;
@@ -42,7 +48,7 @@ const orderSummary = () => {
 
     const renderSummary = () => spanEl.innerText = getTotalAmount();
 
-    const getProduct = (a, b) => a * b;
+    const getMultiply = (quantity, price) => quantity * price;
 
     const init = () => {
         createBasket();
