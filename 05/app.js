@@ -48,7 +48,7 @@ const showEachLevelTime = () => {
 
     workers.forEach(worker => {
         const { label, level } = worker;
-        console.log(worker);
+
         const time = timeNeeded(level);
 
         showTime(label, time);
