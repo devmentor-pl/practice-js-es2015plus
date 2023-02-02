@@ -1,23 +1,33 @@
-const inputs = document.getElementsByClassName('cart__quantity');
-const button = document.querySelector('.cart__btn-calculate');
+const inputEl = document.getElementsByClassName('cart__quantity')
+const arrInput = Array.from(inputEl); 
+console.log(arrInput);
+
 const totalPrice = document.querySelector('.cart__total-price');
-const inputsArray = [...inputs];
+console.log(totalPrice)
 
-const mainSum = (sum) => {
-    totalPrice.textContent = sum;
-}
+const buttonEl = document.querySelector('.cart__btn-calculate');
+console.log(buttonEl);
 
-const finalPrice = (e) => {
-    e.preventDefault();
-
+buttonEl.addEventListener('click', () => {
     let sum = 0;
+    arrInput.forEach(item => {
+        mainSum = inputEl.value * inputEl.dataset.price
+    });   
+    totalPrice.innerText = mainSum
+})
 
-    inputsArray.forEach(input => {
-        sum += input.value * input.dataset.price;
-    })
 
-    mainSum(sum);
 
-}
 
-button.addEventListener('click', finalPrice);
+
+
+
+
+
+
+
+
+
+
+
+
