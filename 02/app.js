@@ -16,7 +16,6 @@ const sumProducts = () => {
 		if (!Number.isNaN(value)) {
 			totalSum += price * value;
 		}
-		return totalSum;
 	});
 
 	totalPrice.innerText = totalSum;
