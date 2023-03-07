@@ -1,4 +1,4 @@
-const taskNumber = null;
+const taskNumber = '01';
 //numer przerabianego zadania
 
 const path = require('path');
@@ -37,7 +37,7 @@ module.exports = {
             template: `./${taskNumber}/index.html`,
             // wskazuje plik źródłowy
             filename: 'index.html'
-            // określan nazwę dla pliku
+            // określam nazwę dla pliku
         })
     ]
 }
