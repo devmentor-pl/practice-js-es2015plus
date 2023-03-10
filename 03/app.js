@@ -6,8 +6,7 @@ const calcSizeFiles = (arr) => {
 
 	arr.forEach((item) => {
 		const {
-			size: { length },
-			size: { unit },
+			size: { length, unit },
 		} = item
 
 		sum += convertSizeToByte(length, unit)
