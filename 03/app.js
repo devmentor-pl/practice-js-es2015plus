@@ -11,19 +11,18 @@ const calcSizeFiles = (arr) => {
 
 		sum += convertSizeToByte(length, unit)
 	})
-	// console.log(sum)
 	return sum.toFixed(2)
 }
 
 const convertSizeToByte = (length, unit = 'B') => {
 	if (unit === 'GB') {
-		return (fileSize = length * 1024 * 1024 * 1024)
+		return length * 1024 * 1024 * 1024
 	} else if (unit === 'MB') {
-		return (fileSize = length * 1024 * 1024)
+		return length * 1024 * 1024
 	} else if (unit === 'KB') {
-		return (fileSize = length * 1024)
+		return length * 1024
 	} else if (unit === 'B') {
-		return (fileSize = length)
+		return length
 	}
 }
 
