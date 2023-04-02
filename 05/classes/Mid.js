@@ -1,10 +1,6 @@
 import Programmer from "./Programmer";
 
 export default class Mid extends Programmer {
-  constructor(skills, experience, willingness) {
-    super(skills, experience, willingness);
-  }
-
   getMinMaxSkills() {
     return [20, 60];
   }
@@ -16,5 +12,4 @@ export default class Mid extends Programmer {
   getMinMaxWilligness() {
     return [50, 90];
   }
-
 }

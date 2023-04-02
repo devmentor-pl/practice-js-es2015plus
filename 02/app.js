@@ -8,15 +8,11 @@ const items = [];
 
 calculateBtn.addEventListener("click", (e) => {
   inputArray.forEach((item) => {
-    const itemPrice = item.getAttribute("data-price");
-    //items.push(parseInt(itemPrice));
-    const itemVal = item.value;
-    //price.push(parseInt(itemVal));
-    sum = itemPrice * itemVal;
+    const { dataset, value } = item;
+    const { price } = dataset;
+    sum = price * value;
     items.push(sum);
   });
-
-  console.log(items);
 
   const showResult = items.reduce((total, amount) => total + amount);
   totalPrice.textContent = showResult;
