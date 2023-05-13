@@ -27,3 +27,23 @@ export const files = [
         }
     }
 ];
+
+export const onBytes = [
+    {
+        unit: 'B',
+        conversionFactor: 1,
+    },
+    {
+        unit: 'KB',
+        conversionFactor: 1024,
+    },
+    {
+        unit: 'MB',
+        conversionFactor: 1048576,
+    },
+    {
+        unit: 'GB',
+        conversionFactor: 1073741824,
+    },
+    
+]
