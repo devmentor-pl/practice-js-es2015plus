@@ -1,15 +1,13 @@
-const cartTotal = document.getElementsByClassName('cart__total-price');
+const totalPrice = document.querySelector('.cart__total-price');
 const cartInputList = document.getElementsByClassName('cart__quantity');
-const buttonList = document.getElementsByClassName('cart__btn-calculate');
+const buttonEl = document.querySelector('.cart__btn-calculate');
 
-const [ buttonEl ] = buttonList;
-const [ totalPrice ] = cartTotal;
 const cartInputArr = [ ...cartInputList ];
 
 let totalSum = 0;
 
 
-const totalPriceHandler = () => {
+buttonEl.addEventListener('click', () => {
     totalSum = 0;
 
     cartInputArr.forEach(element => {
@@ -25,7 +23,5 @@ const totalPriceHandler = () => {
     });
 
     totalPrice.innerText = totalSum;
-}
-
-
-buttonEl.addEventListener('click', totalPriceHandler);
+    }
+);
