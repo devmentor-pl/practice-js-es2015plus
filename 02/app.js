@@ -1,11 +1,23 @@
+// const cartList = document.querySelector("ul");
+// const cartTotalPrice = document.querySelector(".cart__total-price");
+// let sum = 0;
+// cartList.addEventListener("change", (e) => {
+//   const quantity = e.target.value;
+//   const price = e.target.getAttribute("data-price");
+//   sum += quantity * price;
+//   cartTotalPrice.textContent = sum;
+// });
 const cartList = document.querySelector("ul");
 const cartTotalPrice = document.querySelector(".cart__total-price");
-let sum = 0;
-cartList.addEventListener("change", sumProduct);
-
-function sumProduct(e) {
-  const quantity = e.target.value;
-  const price = e.target.getAttribute("data-price");
-  sum += quantity * price;
+const calculateTotal = (e) => {
+  let sum = 0;
+  const inputs = document.getElementsByClassName("cart__quantity");
+  const inputsArr = Array.from(inputs);
+  inputsArr.forEach((input) => {
+    const price = Number(input.dataset.price);
+    const quantity = Number(input.value);
+    sum += price * quantity;
+  });
   cartTotalPrice.textContent = sum;
-}
+};
+cartList.addEventListener("change", calculateTotal);
