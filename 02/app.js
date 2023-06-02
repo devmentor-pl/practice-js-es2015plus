@@ -14,9 +14,13 @@ const calculateTotal = (e) => {
   const inputs = document.getElementsByClassName("cart__quantity");
   const inputsArr = Array.from(inputs);
   inputsArr.forEach((input) => {
-    const price = Number(input.dataset.price);
-    const quantity = Number(input.value);
-    sum += price * quantity;
+    const {
+      dataset: { price },
+      value,
+    } = input;
+    // const price = Number(input.dataset.price);
+    // const quantity = Number(input.value);
+    sum += price * value;
   });
   cartTotalPrice.textContent = sum;
 };
