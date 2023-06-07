@@ -10,10 +10,10 @@ const convertToBytes = (unit, length) => {
   if (unit === "KB") {
     return (length = length * bytes.KB);
   }
-  if (unit === "MB") {
+ else if (unit === "MB") {
     return (length = length * bytes.MB);
   }
-  if (unit === "GB") {
+ else if (unit === "GB") {
     return (length = length * bytes.GB);
   } else return length;
 };
