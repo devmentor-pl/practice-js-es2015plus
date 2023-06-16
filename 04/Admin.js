@@ -1,7 +1,7 @@
 import User from './User'
 
 export default class Admin extends User {
-    constructor({ login, password }) {
+    constructor({ login = '', password = '' } ) {
         super({ login, password })
     }
     isPasswordCorrect() {
