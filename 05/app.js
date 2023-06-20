@@ -29,9 +29,9 @@ const task = {
     size: 1,
 }
 
-// const programmer = new Programmer(features);
-// const time = programmer.getApproximateTimeTaskDoneInHours(task);
-// console.log(time);
+const programmer = new Programmer(features);
+const time = programmer.getApproximateTimeTaskDoneInHours(task);
+console.log(time);
 
 const junior = new Junior(featuresJunior)
 const junior2 = new Junior()

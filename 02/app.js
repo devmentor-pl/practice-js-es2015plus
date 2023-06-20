@@ -1,11 +1,10 @@
 const countTotalPrice = (array) => {
     let sum = 0
 
-    array.forEach(input => {
-        const quantity = Number(input.value)
-        const price = input.dataset.price
-
-        if (quantity < 0 || isNaN(quantity)) {
+    array.forEach(({ value: quantity, dataset: {price}}) => {
+        // const { value: quantity, dataset: {price}} = input
+      
+        if (Number(quantity) < 0 || isNaN(Number(quantity))) {
             alert('Niepoprawna ilość w polu: ' + input.parentElement.textContent)
 
         } else { sum += quantity * price }
