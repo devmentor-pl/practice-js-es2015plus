@@ -1,6 +1,6 @@
 import { files } from './data.js';
 
-const countfile = (...files) => {
+const countFile = (...files) => {
 	const dataArr = [];
 	files.forEach(({ name, size: { length, unit = 'B' } } = files) => {
 		const units = settingDenominator(length, unit);
@@ -24,4 +24,4 @@ const settingDenominator = (length, unit) => {
 	}
 };
 
-countfile(...files);
+countFile(files);
