@@ -1,6 +1,6 @@
 const inputsEl = [...document.getElementsByClassName('cart__quantity')];
 const button = document.querySelector('.cart__btn-calculate');
-
+const totalPriceValue = document.querySelector('.cart__total-price');
 
 const getValueAndMultiplication= () => {
     const arr = [];
@@ -16,11 +16,10 @@ const getValueAndMultiplication= () => {
 const getSum = (arr) => {
    const [a, b, c, d] = arr;
    const totalSum = parseInt(`${a + b + c + d}`);
-   return totalSum;
+   totalPriceValue.innerText = `${totalSum} `;
 }
 
 
 
-
-
 button.addEventListener('click', getValueAndMultiplication);
+
