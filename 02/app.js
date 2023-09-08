@@ -2,24 +2,29 @@ const inputsEl = [...document.getElementsByClassName('cart__quantity')];
 const button = document.querySelector('.cart__btn-calculate');
 const totalPriceValue = document.querySelector('.cart__total-price');
 
-const getValueAndMultiplication= () => {
-    const arr = [];
-    inputsEl.forEach(input => {
-      const value = parseInt(input.value);
-      const price = parseInt(input.dataset.price);
-      const multiply = value * price;
-      arr.push(multiply)
-    })
-    getSum(arr)
-}
-
-const getSum = (arr) => {
-   const [a, b, c, d] = arr;
-   const totalSum = parseInt(`${a + b + c + d}`);
-   totalPriceValue.innerText = `${totalSum} `;
+const getValue = () => {
+  const arr = [];
+  let obj;
+  inputsEl.forEach((input) => {
+      obj = {
+        inputValue: parseInt(input.value),
+        inputPrice: parseInt(input.dataset.price),
+      }
+      arr.push(obj);
+  }) 
+  multiplyAndSum(arr)
 }
 
 
-
-button.addEventListener('click', getValueAndMultiplication);
-
+const multiplyAndSum = (arr) => {
+  const [inputValue,inputPrice] = arr;
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+      const multiplication = arr[i].inputValue * arr[i].inputPrice;
+      sum += multiplication;
+  }
+  const totalPrice = sum;
+  totalPriceValue.innerText = `${totalPrice} `;
+  return totalPrice;
+}
+button.addEventListener('click', getValue);
