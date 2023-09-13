@@ -17,14 +17,14 @@ const getValue = () => {
 
 
 const multiplyAndSum = (arr) => {
-  const [inputValue,inputPrice] = arr;
+  const [inputValue, inputPrice] = arr;
   let sum = 0;
   for (let i = 0; i < arr.length; i++) {
       const multiplication = arr[i].inputValue * arr[i].inputPrice;
       sum += multiplication;
   }
   const totalPrice = sum;
-  totalPriceValue.innerText = `${totalPrice} `;
+  totalPriceValue.innerText = `${totalPrice}`;
   return totalPrice;
 }
 button.addEventListener('click', getValue);
