@@ -1,9 +1,17 @@
-import Programmer from './classes/Programmer';
+import Junior from './classes/Junior.js';
+import Mid from './classes/Mid.js';
+import Senior from './classes/Senior.js';
 
 const features = {
-    skills: 10, 
-    experience: 10, 
-    willingness: 10,
+    getSkillsRandomNumber() {
+        return this.skills;
+    },
+    getExperienceRandomNumber() {
+        return this.experience;
+    },
+    getWillingnessRandomNumber() {
+        return this.willingness;
+    }
 }
 
 const task = {
@@ -11,6 +19,17 @@ const task = {
     size: 1,
 }
 
-const programmer = new Programmer( features );
-const time = programmer.getApproximateTimeTaskDoneInHours( task );
-console.log(time);
+const junior = new Junior ( features );
+const timeJunior = junior.getApproximateTimeTaskDoneInHours( task )
+
+const mid = new Mid ( features );
+const timeMid = mid.getApproximateTimeTaskDoneInHours( task )
+
+const senior = new Senior ( features );
+const timeSenior = senior.getApproximateTimeTaskDoneInHours( task );
+
+
+
+console.log(timeJunior, "Junior", junior)
+console.log(timeMid, 'Mid', mid)
+console.log(timeSenior, 'Senior', senior)
