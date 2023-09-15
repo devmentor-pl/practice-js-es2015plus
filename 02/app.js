@@ -13,18 +13,12 @@ const getValue = () => {
   
         return obj
     });
-  
-  
     return arr;
   }
   const getTotalPrice = (arr) => {
-    let sum = 0;
-    for (let i = 0; i < arr.length; i++) {
-       const {inputValue, inputPrice} = arr[i];
-        sum += inputValue * inputPrice;
-    }
-    const totalPrice = sum;
-    totalPriceValue.innerText = `${totalPrice}`;
+    const multiply = arr.map((el) => el.inputValue * el.inputPrice);
+    const totalSum = multiply.reduce((num, currentValue) => num + currentValue);
+    totalPriceValue.innerText = `${totalSum}`;
   }
   
   button.addEventListener('click', function() {
