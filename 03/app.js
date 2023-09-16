@@ -1,60 +1,33 @@
 import {files} from './data.js';
-
-
-// const init = () => {
-//   console.log(bytes());
-//   console.log(KbToBytes());
-//   console.log(mbToBytes());
-//   console.log(gbToBytes());
-//   console.log(getTotalSize());
-  
-// }
-
-// document.addEventListener('DOMContentLoaded', init)
-
-
-// const bytes = () => {
-//   const {length, unit = "B"} = arr;
-//   TotalSizeArr.push(length)
-//   return length;
-// }
-// const KbToBytes = () => {
-//     const {length} = arr[1];
-//     const convert =  length * 1024;
-//     TotalSizeArr.push(convert);
-//     return convert;
-// }
-// const mbToBytes = () => {
-//   const {length} = arr[2];
-//   const convert =  length * 1024 ** 2;
-//   TotalSizeArr.push(convert);
-//   return convert;
-// }
-// const gbToBytes = () => {
-//   const {length} = arr[3];
-//   const convert =  length * 1024 ** 3;
-//   TotalSizeArr.push(convert);
-//   return convert;
-// }
-// const getTotalSize = () => {
-//   let sum = 0;
-
-//   TotalSizeArr.forEach((num) => {
-//     sum += num;
-//   })
-//   return sum;
-// }
-
 const arr = [];
+const TotalSizeArr = [];
 
 files.forEach((el) => {
   const {size} = el;
-  arr.push(size);
+  const {length, unit = "B"} = size;
+  arr.push({length, unit})
 })
 
-const bytes = () => {
-  const {length, unit = "B"} = arr;
-  TotalSizeArr.push(length)
-  return length;
+const getTotalSize = () => {
+  const newArray = arr.map((el) => {
+    const {length, unit} = el;
+    if (unit === "B") {
+      TotalSizeArr.push(length);
+    }
+    if (unit === "KB") {
+      const convert = length * 1024;
+      TotalSizeArr.push(convert);
+    }
+    if (unit === "MB") {
+      const convert = length * 1024 ** 2;
+      TotalSizeArr.push(convert);
+    }
+    if (unit === "GB") {
+      const convert = length * 1024 ** 3;
+      TotalSizeArr.push(convert);
+    }
+  })
+  const sumOfSizes = TotalSizeArr.reduce((num, currentValue) => num + currentValue);
+  console.log(sumOfSizes)
 }
-
+getTotalSize();
