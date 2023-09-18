@@ -17,7 +17,7 @@ const getValue = () => {
   }
   const getTotalPrice = (arr) => {
     const multiply = arr.map((el) => el.inputValue * el.inputPrice);
-    const totalSum = multiply.reduce((num, currentValue) => num + currentValue);
+    const totalSum = multiply.reduce((num, currentValue) => num + currentValue, 0);
     totalPriceValue.innerText = `${totalSum}`;
   }
   

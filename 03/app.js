@@ -2,11 +2,16 @@ import {files} from './data.js';
 const arr = [];
 const TotalSizeArr = [];
 
+
 files.forEach((el) => {
   const {size} = el;
   const {length, unit = "B"} = size;
   arr.push({length, unit})
 })
+
+
+console.log(arr)
+
 
 const getTotalSize = () => {
   const newArray = arr.map((el) => {
