@@ -1,7 +1,7 @@
 const path = require('path');
 // importuję bibliotekę [path] z [node.js]
 module.exports = {
-entry: './app.js',
+entry: './src/app.js',
 // definiuję plik wejściowy
 output: {
 path: path.resolve(__dirname, 'build'),
