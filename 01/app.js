@@ -1,5 +1,3 @@
-test;
-
 const message = {
     text: ((text) => text)("Webpack działa! Gratulacje!"),
 };
