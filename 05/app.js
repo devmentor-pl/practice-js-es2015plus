@@ -14,3 +14,15 @@ const task = {
 const programmer = new Programmer( features );
 const time = programmer.getApproximateTimeTaskDoneInHours( task );
 console.log(time);
+
+const junior = new Junior ()
+const learningJuniroTime = junior.getApproximateTimeTaskDoneInHours( task );
+console.log(learningJuniroTime, 'junior');
+
+const mid = new Mid ()
+const learningMidTime = mid.getApproximateTimeTaskDoneInHours( task );
+console.log(learningJuniroTime, 'mid');
+
+const senior = new Senior()
+const learningSeniorTime = senior.getApproximateTimeTaskDoneInHours( task );
+console.log(learningJuniroTime, 'senior');
