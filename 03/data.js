@@ -27,3 +27,5 @@ export const files = [
         }
     }
 ];
+
+export default files
