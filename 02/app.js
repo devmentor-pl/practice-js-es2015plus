@@ -18,7 +18,7 @@ const sumProducts = () => {
         }
     });
 
-    totalPrice.innerText = totalSum + "PLN";
+    totalPrice.innerText = totalSum;
 };
 
 sumBtn.addEventListener("click", sumProducts);
