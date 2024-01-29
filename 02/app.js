@@ -3,9 +3,9 @@ const btnEl = document.querySelector(".cart__btn-calculate");
 const cartItemList = [...document.getElementsByClassName("cart__item")]; 
 
 
-let totalPrice = 0;
 
 const calculateCart = () => {
+    let totalPrice = 0;
 
     cartItemList.forEach(item => {
         const input = item.querySelector(".cart__quantity");
