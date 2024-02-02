@@ -4,7 +4,7 @@ const convertToBytes = ({ length, unit }) => {
   const sizeInBytes = parseFloat(length);
 
   if (isNaN(sizeInBytes)) {
-    return 0; // Zwróć 0 dla nieprawidłowych wartości
+    return 0; 
   }
 
   // Konwersja jednostek na bajty
@@ -20,6 +20,12 @@ const convertToBytes = ({ length, unit }) => {
   }
 };
 
+const calculateTotalSizeInBytes = (filesInBytes) => {
+    return filesInBytes.reduce((totalSize, file) => {
+      return totalSize + file.size;
+    }, 0);
+};
+
 const filesInBytes = [...files].map(file => {
   const { length, unit } = file.size;
   const newSizeInBytes = convertToBytes({ length, unit });
@@ -30,4 +36,8 @@ const filesInBytes = [...files].map(file => {
   };
 });
 
-console.log(filesInBytes);
+
+const totalSize = calculateTotalSizeInBytes(filesInBytes);
+
+console.log("Total size in bytes:", totalSize);
+
