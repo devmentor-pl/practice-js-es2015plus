@@ -1,22 +1,33 @@
-import {files} from './data.js';
-const data = files;
+import { files } from './data.js';
 
+const convertToBytes = ({ length, unit }) => {
+  const sizeInBytes = parseFloat(length);
 
-const convertToBytes = ({ size, unit = 'B'}) => {
-    const sizeInBytes = parseInt(size, 10);
+  if (isNaN(sizeInBytes)) {
+    return 0; // Zwróć 0 dla nieprawidłowych wartości
+  }
 
-    // Konwersja jednostek na bajty
-    switch (unit.toUpperCase()) {
-        case 'KB':
-            return sizeInBytes * 1024;
-        case 'MB':
-            return sizeInBytes * 1024 * 1024;
-        case 'GB':
-            return sizeInBytes * 1024 * 1024 * 1024;
-        default:
-            return sizeInBytes;
-    }
+  // Konwersja jednostek na bajty
+  switch ((unit || 'B').toUpperCase()) {
+    case 'KB':
+      return Math.round(sizeInBytes * 1024);
+    case 'MB':
+      return Math.round(sizeInBytes * 1024 * 1024);
+    case 'GB':
+      return Math.round(sizeInBytes * 1024 * 1024 * 1024);
+    default:
+      return Math.round(sizeInBytes);
+  }
 };
 
+const filesInBytes = [...files].map(file => {
+  const { length, unit } = file.size;
+  const newSizeInBytes = convertToBytes({ length, unit });
 
+  return {
+    ...file,
+    size: newSizeInBytes,
+  };
+});
 
+console.log(filesInBytes);
