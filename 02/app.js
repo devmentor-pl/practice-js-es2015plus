@@ -29,4 +29,3 @@ const renderTotalPrice = (value) => {
 }
 
 btnCalculate.addEventListener('click', formSubmit)
-
