@@ -63,3 +63,11 @@ export default class Programmer {
         return time;
     }
 }
+
+
+
+// constructor( {skills = null, experience = null, willingness = null} = {} ) {
+//     this.skills = this.isNumber(skills) ? skills : this.getSkillsRandomNumber();
+//     this.experience = this.isNumber(experience) ? experience : this.getExperienceRandomNumber();
+//     this.willingness = this.isNumber(willingness) ? willingness : this.getWillingnessRandomNumber();
+// }
