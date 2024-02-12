@@ -16,6 +16,9 @@ const convertToBytes = ({ length, unit }) => {
     case 'GB':
       return Math.round(sizeInBytes * 1024 * 1024 * 1024);
     default:
+      if (unit) {
+        return " Unknown unit: " + unit;
+      }
       return Math.round(sizeInBytes);
   }
 };
