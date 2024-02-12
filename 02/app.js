@@ -1,12 +1,11 @@
 // Funkcja pomocnicza do sprawdzenia czy wartości są liczbami i zsumowaniu ich
 const checkNumbers = (a, b) => {
-    if (a !== '' && b !== '' && !isNaN(parseFloat(a)) && !isNaN(parseFloat(b))) {
-        const sum = parseFloat(a) * parseFloat(b);
-        console.log(sum);
-        return sum;
-    } else {
-        return 0; // Ustaw sumę na 0, jeśli wartość jest pusta lub nie jest liczbą
+    if (isNaN(a) || isNaN(b)) {
+        return 0;
     }
+    const sum = parseFloat(a) * parseFloat(b);
+    console.log(sum);
+    return sum;
 }
 
 const inputElements = document.getElementsByClassName('cart__quantity');
