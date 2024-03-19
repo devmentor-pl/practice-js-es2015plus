@@ -9,8 +9,8 @@ const countTotalPrice = () => {
 let totalPrice = 0;
 
 itemList.forEach((item) => {
-  const price = item.getAttribute("data-price");
-  const value = item.value;
+  const {value, dataset} = item;
+  const price = dataset.price;
   totalPrice += price * value;
 });
 
