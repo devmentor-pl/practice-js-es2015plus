@@ -1,4 +1,4 @@
-const taskNumber = null;
+const taskNumber = '05';
 //numer przerabianego zadania
 
 const path = require('path');
@@ -15,7 +15,7 @@ module.exports = {
         // definiuję nazwę pliku wyjściowego
     },
     target: "web", 
-    // niezbędne do uruchomienia automatycznego odświeżania z webpack-dev-server@3
+    // niezbędne do uruchomienia arutomatycznego odświeżania z webpack-dev-sever@3
     // https://github.com/webpack/webpack-dev-server/issues/2758
     module: {
         rules: [
