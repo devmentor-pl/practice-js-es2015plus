@@ -19,8 +19,8 @@ const junior = new Junior ();
 const mid = new Mid ();
 const senior = new Senior ();
 
-const time = programmer.getApproximateTimeTaskDoneInHours( task );
-console.log(time);
+/* const time = programmer.getApproximateTimeTaskDoneInHours( task );
+console.log(time); */
 
 const finalTest = task => {
   while (task.difficult <= 3) {
