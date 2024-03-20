@@ -6,41 +6,15 @@ const unifyUnits = (length, unit) => {
     return result;
   }
 
-  let unitFactor;
+  const unitFactor = {KB: 1, MB: 2, GB: 3};
 
-  switch (unit) {
-    case "KB":
-      unitFactor = 1;
-      break;
-    case "MB":
-      unitFactor = 2;
-      break;
-    case "GB":
-      unitFactor = 3;
-      break;
-  }
-
-  const result = length * 1024 ** unitFactor;
+  const result = length * 1024 ** unitFactor[unit];
   return result;
 };
 
 const specifyUnit = (unitFactor) => {
-  let unit;
-  switch (unitFactor) {
-    case 0:
-      unit = "B";
-      break;
-    case 1:
-      unit = "KB";
-      break;
-    case 2:
-      unit = "MB";
-      break;
-    case 3:
-      unit = "GB";
-      break;
-  }
-  return unit;
+  const unit = { 0: "B", 1: "KB", 2: "MB", 3: "GB" };
+  return unit[unitFactor];
 }
 
 const roundTotalSizeUnit = (totalSize) => {
