@@ -1,3 +1,4 @@
+// KONSULTACJE - OPIS W TREŚCI
 // w momencie pobierania danych z obiektów używaj destrukturyzacji.
 
 // pobieramy wpisane wartości i ceny //DZIAŁA
@@ -44,5 +45,5 @@ button.addEventListener('submit', getSum)
 // WSTAWIAMY SUMĘ 
 const totalPrice = cart.querySelector('.cart__total-price');
 console.log(totalPrice);
-totalPrice.innerText = getSum; //BłĄD - wstawia całą sumę, zamiast wyniku
+totalPrice.innerText = getSum; //BłĄD - wstawia całą funkcję, zamiast wyniku
 
