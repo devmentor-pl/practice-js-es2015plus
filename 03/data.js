@@ -1,4 +1,5 @@
-//KONSULTACJE - OD LINII 31
+//KONSULTACJE - OD LINII 31 
+// w linii 94 nie dodaje wielkości
 
 // export const files = [
 //     {
