@@ -1,8 +1,10 @@
-//KONSULTACJE - OD LINII 31 
-// w linii 94 nie dodaje wielkości
+//KONSULTACJE 
+// w linii 37 nie dodaje wielkości
+//podobnie jak w zadaniu 2, proszę o wskazówki do uzycia desrukturyzacji
 
-//Przy pobieraniu danych wykorzystaj destrukturyzację oraz wartości domyślne.
-//Zaimplementowane rozwiązanie podziel na mniejsze części, które będą wykonywane przez niezależne funkcje.
+
+// + DODAĆ wartości domyślne.
+// + Zaimplementowane rozwiązanie podziel na mniejsze części, które będą wykonywane przez niezależne funkcje.
 
 import {files} from './data.js';
 

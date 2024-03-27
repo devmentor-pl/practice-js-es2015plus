@@ -1,5 +1,5 @@
-// KONSULTACJE - OPIS W TREŚCI
-// w momencie pobierania danych z obiektów używaj destrukturyzacji.
+// KONSULTACJE - BŁĄD W LINII 36  i 48
+// + jak uyć tutaj destrukturyzację? czytając skrypt wydaje mi się ona zrozumiała, ale tutaj mi nie pasuje jej uzycie.
 
 // pobieramy wpisane wartości i ceny //DZIAŁA
 const getInputsValue = event => {
