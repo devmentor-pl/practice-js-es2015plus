@@ -1,4 +1,4 @@
-export default class Programmer {
+export default class Mid {
     constructor( {skills = null, experience = null, willingness = null} = {} ) {
         this.skills = this.isNumber(skills) ? skills : this.getSkillsRandomNumber();
         this.experience = this.isNumber(experience) ? experience : this.getExperienceRandomNumber();
