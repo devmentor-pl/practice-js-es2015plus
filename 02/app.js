@@ -2,30 +2,33 @@ document.addEventListener("DOMContentLoaded", init);
 
 function init() {
   let prices = [];
-  const inputAmountElements = [
+  const cartQuantityElements = [
     ...document.getElementsByClassName("cart__quantity"),
   ];
   const calculateButtonElement = document.querySelector(".cart__btn-calculate");
   const totalPriceElement = document.querySelector(".cart__total-price");
 
-  const calculate = () => {
-    const sum = prices.reduce((acc, price) => (acc += price), 0);
+  const calculateAndDisplayTotalPrice = (numbersArray = []) => {
+    const sum = numbersArray.reduce((acc, price) => (acc += price), 0);
     totalPriceElement.innerText = sum;
 
-    inputAmountElements.forEach((input) => {
-      input.value = "";
+    cartQuantityElements.forEach((cartItem) => {
+      cartItem.value = "";
     });
     prices = [];
   };
-  const handleChange = (e) => {
+  const handleInput = (e) => {
     const { value } = e.target;
     const { price } = e.target.dataset;
     const sum = Number(value) * Number(price);
 
     prices.push(Number(sum));
+    console.log(prices);
   };
-  inputAmountElements.forEach((input) => {
-    input.addEventListener("change", handleChange);
+  cartQuantityElements.forEach((input) => {
+    input.addEventListener("input", handleInput);
   });
-  calculateButtonElement.addEventListener("click", calculate);
+  calculateButtonElement.addEventListener("click", (e) =>
+    calculateAndDisplayTotalPrice(prices)
+  );
 }

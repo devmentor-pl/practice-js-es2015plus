@@ -1,39 +1,39 @@
-import { files } from "./data.js";
+import { files as data } from "./data.js";
 
 // 1KB = 1024B, 1MB = 1024KB
-const convertSizeToMB = (type, size) => {
-	let sizeInMB = 0;
-	switch (type) {
-		case "B":
-			sizeInMB = size / Math.pow(1024, 2);
-			break;
-		case "KB":
-			sizeInMB = size / 1024;
-			break;
-		case "GB":
-			sizeInMB = size * 1024;
-			break;
-		default:
-			sizeInMB = parseInt(size);
-			break;
-	}
+const convertToMB = (unit = "B", size) => {
+  let sizeInMB = 0;
+  switch (unit) {
+    case "KB":
+      sizeInMB = size / 1024;
+      break;
+    case "MB":
+      sizeInMB = parseInt(size);
+      break;
+    case "GB":
+      sizeInMB = size * 1024;
+      break;
+    default:
+      sizeInMB = size / Math.pow(1024, 2);
+      break;
+  }
 
-	return sizeInMB;
+  return sizeInMB;
 };
 
-const sumFilesSize = (files) => {
-	let sum = 0;
-	const filesCopy = files.slice();
+const calculateTotalSize = (data) => {
+  let sum = 0;
 
-	sum = filesCopy.reduce((acc, file) => {
-		const { length } = file.size;
-		const { unit = "B" } = file.size;
+  sum = [...data]
+    .reduce((acc, file) => {
+      const { length, unit } = file.size;
 
-		return acc + convertSizeToMB(unit, length);
-	}, 0);
-	sum = sum.toFixed(2);
-	console.log(sum);
-	return sum;
+      return acc + convertToMB(unit, length);
+    }, 0)
+    .toFixed(2);
+
+  console.log(sum);
+  return sum;
 };
 
-sumFilesSize(files);
+calculateTotalSize(data);
