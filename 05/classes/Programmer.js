@@ -36,7 +36,7 @@ export default class Programmer {
         return [0, 100];
     }
 
-    getMinMaxWilligness() {
+    getMinMaxWillingness() {
         return [0, 100]
     }
 
