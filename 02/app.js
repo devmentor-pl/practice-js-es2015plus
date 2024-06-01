@@ -5,7 +5,8 @@ const priceOutput = document.querySelector('.cart__total-price');
 checkoutBtn.addEventListener('click', btnEl => {
     let totalPrice = 0;
     inputArr.forEach(element => {
-        totalPrice += element.value * element.dataset.price;
+         const { value: quantity , dataset: { price } } = element;
+         totalPrice += quantity * price;
     });
     priceOutput.innerText = totalPrice;
 })
