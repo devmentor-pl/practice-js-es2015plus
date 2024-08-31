@@ -1,11 +1,11 @@
 export default class User {
-    constructor( {login = '', password = ''} ) {
+    constructor({ login = '', password = '' }) {
         this.login = login;
         this.password = password;
     }
 
     register() {
-        if(this.isValid()) {
+        if (this.isValid()) {
             console.log('done');
             return true;
         }
@@ -15,26 +15,14 @@ export default class User {
     }
 
     isValid() {
-        if(this.isLoginCorrect() && this.isPasswordCorrect()) {
-            return true;
-        }
-
-        return false;
+        return this.isLoginCorrect() && this.isPasswordCorrect();
     }
 
     isLoginCorrect() {
-        if(this.login.includes('@')) {
-            return true;
-        }
-
-        return false;
+        return this.login.includes('@');
     }
 
     isPasswordCorrect() {
-        if(this.password.length >= 6) {
-            return true;
-        }
-
-        return false;
+        return this.password.length >= 6;
     }
 }
