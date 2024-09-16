@@ -1,40 +1,10 @@
-export default class User {
-    constructor( {login = '', password = ''} ) {
-        this.login = login;
-        this.password = password;
-    }
+import Admin from './Admin.js'
+export default class User extends Admin {
+	isPasswordCorrect() {
+		if (this.password.length >= 6) {
+			return true
+		}
 
-    register() {
-        if(this.isValid()) {
-            console.log('done');
-            return true;
-        }
-
-        console.log('error');
-        return false;
-    }
-
-    isValid() {
-        if(this.isLoginCorrect() && this.isPasswordCorrect()) {
-            return true;
-        }
-
-        return false;
-    }
-
-    isLoginCorrect() {
-        if(this.login.includes('@')) {
-            return true;
-        }
-
-        return false;
-    }
-
-    isPasswordCorrect() {
-        if(this.password.length >= 6) {
-            return true;
-        }
-
-        return false;
-    }
+		return false
+	}
 }
