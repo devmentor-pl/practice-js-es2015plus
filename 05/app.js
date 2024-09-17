@@ -1,3 +1,6 @@
+import Junior from './classes/Junior';
+import Mid from './classes/Mid';
+import Senior from './classes/Senior';
 import Programmer from './classes/Programmer';
 
 const features = {
@@ -14,3 +17,16 @@ const task = {
 const programmer = new Programmer( features );
 const time = programmer.getApproximateTimeTaskDoneInHours( task );
 console.log(time);
+
+
+const junior = new Junior();
+const timeJunior = junior.getApproximateTimeTaskDoneInHours( task );
+console.log(timeJunior, 'junior ');
+
+const mid = new Mid();
+const timeMid = mid.getApproximateTimeTaskDoneInHours( task );
+console.log(timeMid, 'mid ');
+
+const senior = new Senior();
+const timeSenior = senior.getApproximateTimeTaskDoneInHours( task );
+console.log(timeSenior, 'senior ');
