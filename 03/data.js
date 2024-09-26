@@ -10,6 +10,7 @@ export const files = [
         'size': {
             length: 145,
             unit: 'KB',
+            unitExponent: 1,
         }
     },
     {
@@ -17,6 +18,7 @@ export const files = [
         'size': {
             length: 14,
             unit: 'MB',
+            unitExponent: 2,
         }
     },
     {
@@ -24,6 +26,7 @@ export const files = [
         'size': {
             length: 0.9,
             unit: 'GB',
+            unitExponent: 3,
         }
     }
 ];

@@ -5,3 +5,4 @@ const message = {
 const { text } = { ...message };
 
 console.log( text );
+
