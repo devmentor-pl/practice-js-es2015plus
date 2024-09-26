@@ -1,8 +1,8 @@
-const taskNumber = null;
+const taskNumber = '05';
 //numer przerabianego zadania
 
 const path = require('path');
-// importuję bibliotękę [path] z [node.js]
+// importuję bibliotekę [path] z [node.js]
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 // importuję odpowiedni plugin
 module.exports = {
@@ -37,7 +37,7 @@ module.exports = {
             template: `./${taskNumber}/index.html`,
             // wskazuje plik źródłowy
             filename: 'index.html'
-            // określan nazwę dla pliku
+            // określam nazwę dla pliku
         })
     ]
 }
