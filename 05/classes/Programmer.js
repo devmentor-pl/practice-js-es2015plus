@@ -59,7 +59,6 @@ export default class Programmer {
 
             time += 0.25;
         }
-
         return time;
     }
 }
