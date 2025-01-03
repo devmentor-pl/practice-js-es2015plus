@@ -15,7 +15,12 @@ const getSizeInBytes = (size, unit ) => {
     "KB": 1024,
     "MB": 1024 ** 2,
     "GB": 1024 ** 3,
+    "TB": 1024 ** 4
   };
+
+  if (!storageUnits[unit]) {
+    throw new Error(`Invalid unit specified: ${unit}`);
+  }
 
   return size * storageUnits[unit];
 }
