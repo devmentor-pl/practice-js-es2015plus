@@ -16,7 +16,8 @@ btnCalculate.addEventListener("click", () => {
   const areFieldsValid = validateFields(...quantityFieldsList);
 
   if (!areFieldsValid) {
-    return alert("Provide valid fields!");
+    alert("Provide valid fields!");
+    return;
   }
 
   quantityFieldsList.forEach((field) => {
