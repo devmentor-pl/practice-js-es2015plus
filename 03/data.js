@@ -25,5 +25,12 @@ export const files = [
             length: 0.9,
             unit: 'GB',
         }
-    }
+    },
+    // {
+    //     'name': 'img46.jpg',
+    //     'size': {
+    //         length: 0.5,
+    //         unit: 'EB',
+    //     }
+    // }
 ];
