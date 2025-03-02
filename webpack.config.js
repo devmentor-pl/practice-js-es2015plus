@@ -7,6 +7,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 // importuję odpowiedni plugin
 
 const taskNumber = process.env.TASK_NUMBER;
+// dla każdego taska przy odpalaniu build/start należy wpisać w terminalu numer 
+// TASK_NUMBER=02 npm run build
+
 
 module.exports = {
     entry: `./${taskNumber}/app.js`,
