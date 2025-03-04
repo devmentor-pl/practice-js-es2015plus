@@ -46,7 +46,6 @@ module.exports = {
             // określan nazwę dla pliku
         })
     ],
-
     devServer: {
         static: {
             directory: path.join(__dirname, 'build'), // Katalog dla plików statycznych

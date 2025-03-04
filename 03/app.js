@@ -1,27 +1,27 @@
 import {files} from './data.js';
 
-// Funkcja do konwertowania rozmiarów na bajty
-const convertToBytes = ({ length, unit = 'B' }) => {
+// transform files sizes to one unit -switch??
+// sum all units
+
+const convertUnits = ({length, unit = 'B'}) => {
     switch (unit) {
         case 'KB':
-            return length * 1024; // 1KB = 1024B
+            return length * 1024;
         case 'MB':
-            return length * 1024 * 1024; // 1MB = 1024KB = 1024 * 1024B
+            return length * 1024 * 1024;
         case 'GB':
-            return length * 1024 * 1024 * 1024; // 1GB = 1024MB = 1024 * 1024 * 1024B
+            return length * 1024 * 1024 * 1024;
         default:
-            return length; // zakładamy, że jeśli brak jednostki, to są to bajty
+            return length;
     }
 };
 
-// Funkcja do obliczania całkowitego rozmiaru plików
-const calculateTotalSize = (files) => {
+const calculateSize = (files) => {
     return files.reduce((total, file) => {
-        const { size } = file; // Destrukturyzacja obiektu
-        return total + convertToBytes(size); // Dodajemy rozmiar pliku do sumy
+        const {size} = file;
+        return total + convertUnits(size);
     }, 0);
 };
 
-// Wywołanie funkcji i wyświetlenie wyniku
-const totalSize = calculateTotalSize(files);
-console.log(`Całkowity rozmiar plików w bajtach: ${totalSize}`);
+const totalSize = calculateSize(files);
+console.log(`całkowita wielkość to: ${totalSize}B`);
