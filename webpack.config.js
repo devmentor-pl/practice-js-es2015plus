@@ -45,6 +45,16 @@ module.exports = {
             filename: 'index.html'
             // określan nazwę dla pliku
         })
-    ]
+    ],
+
+    devServer: {
+        static: {
+            directory: path.join(__dirname, 'build'), // Katalog dla plików statycznych
+        },
+        watchFiles: ['**/*.html'], // 🔥 Obserwowanie zmian w plikach HTML
+        hot: true,  // 🔥 Włączanie Hot Module Replacement (HMR) dla JS/CSS
+        open: true, // Automatyczne otwieranie przeglądarki
+        port: 3000  // Możesz ustawić inny port, np. 8080
+    }
 }
 // eksportuję ustawienia dla webpack-a
