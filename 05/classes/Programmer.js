@@ -28,6 +28,10 @@ export default class Programmer {
         return this.getRandomNumber(...this.getMinMaxWilligness())
     }
 
+    getTaskRandomNumber(){
+        return this.getRandomNumber(...this.getMinMaxDifficultOrSize())
+    }
+
     getMinMaxSkills() {
         return [0, 100];
     }
@@ -44,7 +48,25 @@ export default class Programmer {
         return Math.floor(Math.random() * (max - min + 1) + min)
     }
 
-    getApproximateTimeTaskDoneInHours( {difficult, size} ) {
+    getMinMaxDifficultOrSize(){
+        return [1,3]
+    }
+
+    // getApproximateTimeTaskDoneInHours( {difficult, size} ={}) {
+    getApproximateTimeTaskDoneInHours( ) {
+        let difficult;
+        let size;
+        if(!arguments[0]){
+            difficult = this.getTaskRandomNumber();
+            size = this.getTaskRandomNumber();
+        } else {
+            difficult = arguments[0].difficult;
+            size = arguments[0].size;
+        }
+        
+        // console.log({difficult});
+        // console.log({size});
+     
         let counter = 0;
         let time = 0;
         let rand;        
