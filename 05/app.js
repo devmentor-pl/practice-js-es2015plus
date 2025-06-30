@@ -20,13 +20,13 @@ console.log(time);
 
 const junior = new Junior();
 const timeJunior = junior.getApproximateTimeTaskDoneInHours( task );
-console.log(`Junior needs:${timeJunior}h for this task.`)
+console.log(`Junior needs ${timeJunior}h for this task.`)
 
 
 const mid = new Mid();
 const timeMid = mid.getApproximateTimeTaskDoneInHours( task );
-console.log(`Mid needs:${timeMid}h for this task.`)
+console.log(`Mid needs ${timeMid}h for this task.`)
 
 const senior = new Senior();
 const timeSenior = senior.getApproximateTimeTaskDoneInHours( task );
-console.log(`Senior needs:${timeSenior}h for this task.`)
+console.log(`Senior needs ${timeSenior}h for this task.`)

@@ -4,42 +4,21 @@ const list = document.createElement("ul")
 body.appendChild(list)
 let totalLengthInByte = 0 
 
-const calcToByte = (length, unit) => {
-  switch (unit) {
-    case "B":
-      return length;
-    case "KB":
-      return length * 1024;
-    case "MB":
-      return length * 1024**2;
-    case "GB":
-      return length * 1024**3
-    default:
-      console.warn(`Unknown unit: ${unit}`);
-      return 0;
-  }
+const byteConvertion = {
+  B: 1,
+  KB: 1024,
+  MB: 1024**2,
+  GB: 1024**3,
 }
 
-const byteToUnit = (length, unit) => {
-  switch (unit) {
-    case "B":
-      return length;
-    case "KB":
-      return length / 1024;
-    case "MB":
-      return length / 1024**2;
-    case "GB":
-      return length / 1024**3
-    default:
-      console.warn(`Unknown unit: ${unit}`);
-      return 0;
+const calcByte =(length, unit, toByte=false) => {
+      return toByte ? length * byteConvertion[unit] :length / byteConvertion[unit];
   }
-}
 
 
 files.forEach(element => {
 const {name, size: {length}, size:{unit="B"}} = element;
-const lengthInByte = Math.trunc(calcToByte(length,unit))
+const lengthInByte = Math.trunc(calcByte(length,unit, true))
 totalLengthInByte += lengthInByte
 
 const liItem = document.createElement("li");
@@ -49,10 +28,10 @@ list.appendChild(liItem)
 
 const total = document.createElement("h2");
 total.innerText = `Total filesize: 
-${byteToUnit(totalLengthInByte, "B")} B
-${byteToUnit(totalLengthInByte, "KB").toFixed(3)} KB
-${byteToUnit(totalLengthInByte, "MB").toFixed(3)} MB
-${byteToUnit(totalLengthInByte, "GB").toFixed(3)} GB
+${calcByte(totalLengthInByte, "B")} B
+${calcByte(totalLengthInByte, "KB").toFixed(3)} KB
+${calcByte(totalLengthInByte, "MB").toFixed(3)} MB
+${calcByte(totalLengthInByte, "GB").toFixed(3)} GB
 `
 body.appendChild(total);
 
