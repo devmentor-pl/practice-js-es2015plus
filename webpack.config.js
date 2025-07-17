@@ -1,10 +1,16 @@
-const taskNumber = null;
+// const taskNumber = null;
 //numer przerabianego zadania
 
 const path = require('path');
 // importuję bibliotękę [path] z [node.js]
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 // importuję odpowiedni plugin
+
+const taskNumber = process.env.TASK_NUMBER;
+// dla każdego taska przy odpalaniu build/start należy wpisać w terminalu numer 
+// TASK_NUMBER=02 npm run build
+
+
 module.exports = {
     entry: `./${taskNumber}/app.js`,
     // definiuje plik wejściowy
@@ -39,6 +45,15 @@ module.exports = {
             filename: 'index.html'
             // określan nazwę dla pliku
         })
-    ]
+    ],
+    devServer: {
+        static: {
+            directory: path.join(__dirname, 'build'), // Katalog dla plików statycznych
+        },
+        watchFiles: ['**/*.html'], // 🔥 Obserwowanie zmian w plikach HTML
+        hot: true,  // 🔥 Włączanie Hot Module Replacement (HMR) dla JS/CSS
+        open: true, // Automatyczne otwieranie przeglądarki
+        port: 3000  // Możesz ustawić inny port, np. 8080
+    }
 }
 // eksportuję ustawienia dla webpack-a
